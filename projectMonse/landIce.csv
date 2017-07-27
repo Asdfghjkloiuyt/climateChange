@@ -1,0 +1,43 @@
+RC ID,Geographic Area,Number of glacier outlines,"Sum of glacier area, km2"
+2,Norway,3143,2687.77
+3,Canada,1152,40068.6
+4,Alaska,3784,22208.2
+5,Conterminous USA,5282,683.023
+7,Sweden,271,264.475
+8,China,71575,315344
+9,New Zealand,316,353.754
+10,Southwestern Asia (Pakistan + Afghanistan),410,709.904
+11,S. European Alps,948,912.667
+12,"Himalaya (India, Nepal, Bhutan)",43238,47309.6
+13,Tropical glaciers,909,968.55
+16,Russian Glaciers (exact boundaries of RC to be defined),1363,1690.71
+17,Russian and former Soviet Union glaciers,91,500.256
+18,Antarctic Peninsula,659,26449.8
+19,"Svalbard, Jan Mayen, and Bouvet",1583,33841
+20,"Chilean glaciers, between -18 and -56 degrees latitude",88,3973.68
+22,Iceland,262,11058.2
+23,Iran,484,40.2521
+26,Kerguelen Island,340,1242.77
+27,Argentina,73,161.504
+29,Mongolia,2091,1233.21
+30,Swiss Alps,6753,4166.31
+32,Italian Alps,30,5.60736
+33,French Alps,2155,1288
+34,Austrian Alps,3457,2457.12
+37,Central Asia,661,133.244
+502,Siberian Mountains,6099,7285.15
+505,Antarctic Peninsula,1547,95272.6
+511,Italy,904,368.32
+520,Chile,86,249.423
+526,East Central Greenland,259,55008.2
+536,Northern Cordillera,17547,26891
+547,Irian Jaya,15,4.47097
+550,Northeast Greenland,48,1160.96
+556,Khumbu Area,3520,6122.1
+561,Various (GlobGlacier),20310,25584.7
+562,Chilean Norte Chico (25 to 32 degrees south latitude),152,20.8401
+565,Antarctic Peninsula,2536,100845
+571,Swiss Alps,9542,3030.84
+572,Mainland Norway,1069,51591.5
+602,Various (NSIDC),231,33143.8
+761,Randolph Glacier Inventory; Umbrella RC for merging the RGI into GLIMS,149612,351564
