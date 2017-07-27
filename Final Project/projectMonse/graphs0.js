@@ -1,5 +1,5 @@
 
-Plotly.d3.csv('projectMonse/outFile_beijing_weather2.csv', function(rows){
+Plotly.d3.csv('C:Documents\climateChange\projectMonse\outFile_beijing_weather2.csv', function(rows){
   console.log(window.location.pathname);  
   var trace = {
       type: 'scatter',                    // set the chart type
