@@ -129,6 +129,7 @@ div.tab button.active {
     background-image: url("http://dujs.dartmouth.edu/wp-content/uploads/13_74_25_web.jpg");
     background-size:cover;
     color:white;
+}
 #tttabBg:hover{
     background-image: url("http://dingo.care2.com/pictures/causes/3203/3202416.large.jpg");
     background: 
