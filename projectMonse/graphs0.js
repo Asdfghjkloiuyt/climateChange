@@ -1,5 +1,5 @@
 
-Plotly.d3.csv('outFile_beijing_weather2.csv', function(rows){
+Plotly.d3.csv('../projectMonse/outFile_beijing_weather2.csv', function(rows){
     var trace = {
       type: 'scatter',                    // set the chart type
       mode: 'lines',                      // connect points with lines
