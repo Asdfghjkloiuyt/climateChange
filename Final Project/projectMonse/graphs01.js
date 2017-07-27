@@ -1,4 +1,4 @@
-Plotly.d3.csv('landIce.csv', function(allRows){
+Plotly.d3.csv('projectMonse/landIce.csv', function(allRows){
 
     var xValues = [];
     var yValues = [];

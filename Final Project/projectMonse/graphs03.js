@@ -1,4 +1,4 @@
-Plotly.d3.csv('outFile_co2_annmean_gl.csv', function(rows){
+Plotly.d3.csv('projectMonse/outFile_co2_annmean_gl.csv', function(rows){
     var trace = {
       type: 'scatter',                    // set the chart type
       mode: 'lines',                      // connect points with lines

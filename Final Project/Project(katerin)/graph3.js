@@ -1,4 +1,4 @@
-Plotly.d3.csv('seaLevel.csv', function(allRows){
+Plotly.d3.csv('Project(katerin)/seaLevel.csv', function(allRows){
 
     var xValues = [];
     var yValues = [];

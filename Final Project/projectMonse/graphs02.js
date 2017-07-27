@@ -1,4 +1,4 @@
-Plotly.d3.csv('piomasSumdata.txt', function(allRows){
+Plotly.d3.csv('projectMonse/piomasSumdata.txt', function(allRows){
 
     var xValues = [];
     var yValues = [];
@@ -29,8 +29,8 @@ Plotly.d3.csv('piomasSumdata.txt', function(allRows){
     var data = [trace1];
 
     var layout = {
-      title: 'Artic Ice',
-      yaxis: {title: "Amount of Artic Ice"}
+      title: 'Arctic Ice',
+      yaxis: {title: "Amount of Arctic Ice"}
     };
 
     Plotly.newPlot('articIce', data, layout);
