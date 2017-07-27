@@ -1,0 +1,1932 @@
+
+
+/****************************************************************
+
+CSS Styles for the National Snow and Ice Data Center (NSIDC)
+
+author S.Truex 
+
+stephen dot truex at nsidc dot org
+
+
+file thoroughly cleaned up & organized 2/19/08
+
+
+****************************************************************/
+
+
+/**********************************************
+
+
+Table of Contents
+
+
+1. Global Styles
+
+	a. font styles
+	
+	b. captions & credits
+	
+	
+2. Main Banner Styles (not including main nav)
+
+
+3. Main site navigation
+
+
+4. Toolbox styles
+
+
+5. Home Page specific styles
+
+	a. quick search styles on home page
+	
+	
+6. Secondary Site specific styles
+
+
+7. Revised and new styles
+
+	a. forms
+	
+	b. Press Releease pages
+	
+	c. Photo Gallery
+	
+	d. Miscellaneous styles
+	
+	e. Bio pages
+	
+	f. Notices
+	
+	g. Development Server
+	
+
+8. Old unedited styles
+
+
+**********************************************/
+
+
+
+/********************
+
+
+Global styles
+
+
+********************/
+
+
+/* html and body styles used to center web pages */
+
+html {
+	width: 100%;
+}
+
+
+body {
+	position: relative;
+	top: -11px;
+	font-family: Helvetica Neue, Arial, Helvetica, sans-serif; /* changed 4/8/09 ST */
+	/* font-family: Arial, Helvetica, sans-serif; */
+	font-weight: normal;
+	font-size: 80%;
+	color: #333333;
+	background-color: #FFFFFF;
+	margin: auto;
+	padding: 10px 0;
+	//padding: 9px 0;
+	text-align: left;
+	width: 97%;
+	max-width: 1100px;
+}
+
+a { color: #003366; }
+a:visited { color: #666666; }
+a:hover { color: #006699; }
+a:active { color: #003399; }
+
+p {
+	padding-top: 3px;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 8px;
+	margin: 5px 0 0 0;
+}
+
+/* these are old, but still widely used - 
+Indents shared by embedded 	 style guide.
+There was a "Do not edit" designation given to these
+tags as of 2003, but this may no longer be the case.
+These should be investigated if a new style sheet is
+created. 
+*/
+.I1 { margin-left:2%; }
+.I2 { margin-left:4%; }
+.I3 { margin-left:6%; }
+.I4 { margin-left:8%; }
+.I5 { margin-left:10%; }
+.I6 { margin-left:12%; }
+
+
+h1 {
+	font-family: Verdana, Tahoma, sans-serif; /* changed Arial to Tahoma 4/8/09 ST */
+	font-size: 130%;
+	font-weight: bold;
+	color: #003366;
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	margin-bottom: 0px;
+}
+
+h2 {
+	font-family: Verdana, Tahoma, sans-serif; /* changed Arial to Tahoma 4/8/09 ST */
+	font-size: 115%;
+	font-weight: bold;
+	color: #003366;
+	line-height: normal;
+	padding-top: 6px;
+	padding-bottom: 3px;
+	padding-left: 0px;
+	margin: 0px;
+}
+
+h3 {
+	font-family: Verdana, Tahoma, sans-serif; /* changed Arial to Tahoma 4/8/09 ST */
+	font-size: 105%;
+	font-weight: bold;
+	color: #003366;
+	line-height: normal;
+	padding-top: 6px;
+	padding-bottom: 3px;
+	padding-left: 0px;
+	margin: 0px;
+}
+
+h4 {
+	font-family: Verdana, Tahoma, sans-serif; /* changed Arial to Tahoma 4/8/09 ST */
+	font-size: 90%;
+	font-weight: bold;
+	color: #003366;
+	line-height: normal;
+	padding: 6px 0 3px 0;
+	margin: 0px;
+}
+
+h5 {
+	font-family: Verdana, Tahoma, sans-serif; /* changed Arial to Tahoma 4/8/09 ST */
+	font-size: 80%;
+	font-weight: bold;
+	color: #003366;
+	line-height: normal;
+	padding-top: 6px;
+	padding-bottom: 3px;
+	padding-left: 0px;
+	margin: 0px;
+}
+
+h6 {
+	font-family: Verdana, Tahoma, sans-serif; /* changed Arial to Tahoma 4/8/09 ST */
+	font-size: 80%;
+	font-weight: bold;
+	color: #000000;
+	line-height: normal;
+	padding-top: 6px;
+	padding-bottom: 3px;
+	padding-left: 0px;
+	margin: 0px;
+}
+
+.reset {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.center {
+	text-align: center;
+}
+
+/**********************
+
+styles for Re-Captcha
+
+**********************/
+
+.recaptchatable .recaptcha_image_cell,#recaptcha_table {
+   background-color:#FFFFFF !important; //reCaptcha widget background color
+ }
+ 
+ #recaptcha_table {
+   border-color: #CCCCCC !important; //reCaptcha widget border color
+ }
+ 
+ #recaptcha_response_field {
+   border-color: #CCCCCC !important; //Text input field border color
+   background-color:#FFFFFF !important; //Text input field background color
+ }
+
+
+/*******************************
+
+
+Font styles 
+
+
+*******************************/
+
+.smallgraybold {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 83%;
+	color: #666666;
+	font-weight: bold;
+}
+.SmallText { 
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:83%;
+	color: #333333;
+}
+.SmallTextGray { 	
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:83%;
+	color: #666666;
+}
+/*
+Headgreen - accent heading style used for data search heading on home
+and headings of interest.
+*/
+.headgreen {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 110%;
+	font-weight: bold;
+	padding-top: 6px;
+	color: #83AE00;
+}
+
+.ipynav {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #0c225f;
+	margin: 0px;
+	padding: 0px;
+}
+
+.SmallSansSerif { font-family:	 arial, helvetica, sans-serif; font-size:	85% ; }
+
+.datafont {
+	font-family: "Courier New", Courier, mono;
+	font-size: 86%;
+}
+
+
+/********************
+
+Captions & Credits 
+
+********************/
+
+
+/* style for image credits */
+.imageCredit {
+	color: #999999;
+	font-style: italic;
+	font-size: xx-small;
+}
+
+
+/*********************************************
+
+
+Main Site Banner styles 
+
+(not including main nav) 
+
+
+*********************************************/
+
+
+/*#siteSearchContainerNSIDCNew {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 12px 12px 0 10px;
+	//padding: 10px 15px 0 0;
+}*/
+
+#siteSearchContainerNSIDCNew {
+	position:relative;
+}
+
+#siteSearchContainerNSIDCNew form {position:absolute;;top:0;right:0;padding: 12px 16px 0 0;//padding:0 15px 0 0;}
+
+#secondaryNavigationContainerNSIDCNew .secondaryNavOuterSpan {position:absolute;right:0;top:0;padding: 10px 8px 3px 0;white-space:nowrap;//padding: 10px 15px 0 0;}
+
+
+#secondaryNavigationContainerNSIDCNew {
+	/*background: url(/ssi/images/new_search_background.gif) top left no-repeat;*/
+	position: absolute;
+	top: 35px;
+	right: 0;
+	padding: 10px 8px 3px 10px;
+	//padding: 10px 15px 3px 0;
+}
+
+.secondaryNavLinkNSIDC {
+	/*color: #A5B7D2;*/
+	color: #FFFFFF;
+	z-index: 100;
+}
+
+.secondaryNavLinkNSIDC:visited {
+	color: #CCCCCC;
+	z-index: 100;
+}
+
+/* replaces .nav1 for banner links to Education Center and Photo Gallery */
+
+.bannerLinksNSIDC {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 85%;
+	font-weight: bold;
+	color: #FFFFFF;
+	line-height: normal;
+	padding: 2px 0 4px 2px;
+	margin: 0px 4px 0px 0px;
+	text-decoration: underline;
+}
+
+#homeSlideshowLeftNSIDC {
+	background: url(/images/home/homeSlideshowLeftNSIDC.gif) top left repeat-x;
+	height: 286px;
+	padding: 0;
+	margin: 0;
+	display: block;
+}
+
+#homeHeaderRightBackgroundNSIDCNew {
+	background: url(http://nsidc.org/images/home/topRight1.jpg) 0 1px repeat-x;
+	//background: url(http://nsidc.org/images/home/topRight1.jpg) 0 2px repeat-x;
+	z-index: 1;
+}
+
+
+#logoContainerNSIDC {
+	padding: 1px 0 2px 0;
+	//padding: 2px 0 0 0;
+	height: 0;
+	white-space: none;
+}
+
+.homeIconLink {
+	position: relative;
+	padding: 0;
+	margin: 0;
+	height: 65px;
+	white-space: none;
+	z-index: 10;
+}
+
+
+
+
+/*******************************
+
+
+Main site navigation 
+
+
+*******************************/
+
+/* navigation container */
+#mainNavigationContainerNSIDC {
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	/*border-left: 1px solid #CCCCCC;*/
+	/*border-right: 1px solid #CCCCCC;*/
+	border: 0;
+	max-width: 1100px;
+}
+
+#mainNavBorderNSIDC {
+	border-bottom: 1px solid #000;
+}
+
+
+/* 
+  ------------------------------------
+  PVII Menu CSS Express Drop-Down Menu
+  by Project Seven Development
+  www.projectseven.com
+  edited for NSIDC Jan 2007
+  ------------------------------------
+*/
+
+/* p7menubar is the root UL and p7menubar ul applies to all the sub-menu ULs.
+Padding and margin set to zero to eliminate all indentation, turn bullets off,
+and set a font-family different from the global font-family declared for the
+body element above. This sets font for just the menu. Do not add a font-size here. */
+
+#p7menubar, #p7menubar ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Root-Level Links.  Do not change the first two properties.
+Adjust padding values to make the root links taller and to offset them
+from the left and right edges of the link box. Font-size is set here and will apply to all menu levels.
+Font color is set to NSIDC blue. */
+
+#p7menubar a {
+	display: block;
+	padding: 5px 4px;
+	border-left: 1px solid #fff;
+	font-size: 0.95em;
+	color: #003366;
+	text-decoration: none;
+}
+
+/* Class assigned to those Root-Level links that have associated Sub-Menus.
+The top and bottom padding assigned this element must be the same as
+that assigned to the p7menubar a element. */
+
+#p7menubar a.trigger {
+	padding: 0 10px 5px 15px;
+	/*border-right: 1px solid #CCCCCC;*/ /* right border for main menu items */
+	font-weight: bold;
+}
+
+/* The Root-Level list items. Floating left allows
+them to appear horizontally. Width is for IE5 Mac. The last rule in
+this style sheet will set the width for this element to auto for all
+other browsers - hiding it from IE5 Mac. The width is proportional.
+As you add and edit root menu items, you will need to test this width
+to ensure it is wide enough to accomodate all text. Note from Kara: at the 
+time of last testing, I was unable to get this to work with IE 5 Mac, but
+.02% of our users use this combo according to our Google stats. */
+
+/* new class ST 12/13/07 experimental for active main nav item */
+#p7menubar a.mainNavActive {
+	padding: 0 10px 5px 15px;
+	/*border-right: 1px solid #CCCCCC;*/ /* right border for main menu items */
+	color: #3680CA; /* shade of red */ /* text color of main menu items on hover */
+	font-weight: bold;
+}
+
+#p7menubar li {
+	float: left;
+	width: 8em;
+}
+
+/* Sets width for Sub-Menu box and the List Items inside - in proportional em units. 
+This allows the sub-menu width to expand if users resize the text in their browsers. */
+
+#p7menubar li ul, #p7menubar ul li  {
+	width: 13em;
+	
+}
+
+/* The sub-menu links. We set top and 
+bottom padding less than the root items and increas the left padding
+to indent the sub-menu links a small amount in from the root links. */
+
+#p7menubar ul li a  {
+	color: #000;
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	padding: 3px 10px;
+	font-size: 0.85em;
+	text-decoration: none;
+}
+
+/* Sub-Menu Unordered Lists describes each dropdown sub-menu grouping. 
+Positioned Absolutely to allow them to appear below their root trigger.
+Set to display none to hide them until trigger is moused over.
+Background Color must be set or problems will be encountered in MSIE. */
+
+#p7menubar li ul {
+	position: absolute;
+	display: none;
+	background-color: #E1E0E0; /* bgcolor of submenus */
+	/*background-color: #fff;*/
+	z-index: 10; /* added 5/18 ST - to make submenus appear on top of other divs w/in navigation div */
+}
+
+/* Changes the Text color and background color when the Root-Level
+menu items are moused over. The second selector sets color and background
+when Root-Level items are accessed with the keyboard tab key. The third
+selector sets an active state to support keyboard access in MSIE. The fourth 
+selector is assigned to IE5 and IE6 Windows via the P7_ExpMenu script.
+Note that IE7 supports hover on elements other than links and so behaves
+like Firefox, Opera, and Safari - making the menu operable even if JavaScript
+is not enabled. (old color code for border left DCE3EA) */
+
+#p7menubar li:hover a, #p7menubar a:focus,
+#p7menubar a:active, #p7menubar li.p7hvr a {
+	color: #D53135; /* shade of red */ /* text color of main menu items on hover */
+	/*color: #5FC8F3;*/ /* shade of blue */ /* text color of main menu items on hover */
+	background-color: transparent; /* bgcolor of main menu items on hover */
+	/*border-left: 1px solid #003366;*/ /* left border for sub-menus */
+	/*border-right: 1px solid #003366;*/
+	position: relative;
+}
+
+/* Set the Sub-Menu UL to be visible when its associated
+Root-Level link is moused over. The second selector is 
+assigned to IE5 and IE6 via the P7_ExpMenu script. */
+
+#p7menubar li:hover ul, #p7menubar li.p7hvr ul {
+	display: block;
+	border-top: 1px solid #000; /* top border for submenus */
+}
+
+/* Sets the Text color of the Sub-Level links when the Root-Level
+menu items are moused over. The second selector is 
+assigned to IE5 and IE6 via the P7_ExpMenu script.
+The color set should march the normal Sub-Level link color
+in the rule: #p7menubar ul li a. */
+
+#p7menubar li:hover ul a, #p7menubar li.p7hvr ul a {
+	color: #003366;
+	background-color: transparent;
+}
+
+/* The normal hover class for Sub-Level links. The Important directive
+is required for older browsers. We set a background color, which shows
+over the gradient background. We set text color to white. */
+
+#p7menubar ul a:hover {
+	background-color: #A5C1DD!important; /* bgcolor of submenu items on hover */
+	color: #000!important; /* bgcolor of submenu text on hover */
+}
+
+/* The single backslash \ character inside this comment
+causes IE5 Mac to ignore the following rule, which allows other
+browsers to render top-level menu items to their natural width.
+Do not edit this rule in any way. */
+
+#p7menubar li {width: auto;}
+
+
+
+/*****************************
+
+
+Toolbox styles 
+
+
+*****************************/
+
+/* toolbox container */
+#toolboxContainer {
+	margin: 0 0 0 20px;
+	/*float: right;*/
+	//text-align: left;
+}
+
+/*
+Toolboxhead - generic class for headings in the toolbox area (if for some reason using other than standard labels)
+*/
+
+/* old, not used anywhere on live site */
+.toolboxhead {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 95%;
+	line-height: 20px;
+	font-weight: bold;
+	color: #FFFFFF;
+	padding: 6px 4px 4px 4px;
+	margin: 17px 0 4px 0;
+}
+
+.toolboxHeading {
+	background: url(/images/global/toolbox_heading_bg.jpg) top left no-repeat;
+	width: 100%;
+}
+
+/*
+Seealso, related, news, toolboxother:
+used for headings in the toolbox areas of all pages.
+*/
+.seealso {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 105%;
+	font-weight: bold;
+	color: #006699;
+	padding: 6px 4px 4px 4px;
+	margin: 17px 0 4px 0;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #006699;
+}
+
+.relatedresources {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 105%;
+	font-weight: bold;
+	color: #85B000;
+	padding: 6px 4px 4px 4px;
+	margin: 17px 0 4px 0;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #85B000;
+}
+
+.news {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 105%;
+	font-weight: bold;
+	color: #6482A2;
+	padding: 6px 4px 4px 4px;
+	margin: 17px 0 4px 0;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #6482A2;
+}
+
+.toolboxother {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 105%;
+	font-weight: bold;
+	color: #333366;
+	padding: 6px 4px 4px 4px;
+	margin: 17px 0 4px 0;
+	border-left: 1px solid #333366;
+}
+
+/*
+Callouthead - used for headings wi1px toolbox areas.
+Be consistent with your use of the <p> tag and these styles. 
+*/
+.callouthead {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 85%;
+	font-weight: bold;
+	color: #003366;
+	padding: 4px 4px 0 4px;
+	margin: 0;
+}
+
+/*
+Callout - used for text wi1px toolbox areas.
+Be consistent with your use of the <p> tag and these styles.
+*/
+.callouttext {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .88em;
+	font-weight: normal;
+	color: #003366;
+	padding: 2px 4px 0 5px;
+	margin: 0;
+}
+
+/*
+Helptext - used for instructional text for forms and form elements.
+*/
+.helptext {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 83%;
+	color: #666666;
+	font-weight: normal;
+}
+
+/*
+Newsdate - used dates associated with NSIDC-produced news postings, but not for "NSIDC in the News" or "Cryosphere in the News" items.
+*/
+.newsdate {
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 90%;
+	font-weight: bold;
+	color: #990033;
+	padding-top: 5px;
+	padding-right: 0px;
+	padding-bottom: 5px;
+	padding-left: 0px;
+	margin: 0px;
+}
+
+
+
+
+/******************************************
+
+
+Home Page styles
+
+used only on the home page
+
+
+*****************************************/
+
+
+/* puts a border on the home page */
+#homeBodyBorderNSIDC {
+	border: 1px solid #000;
+	border-top: 0;
+}
+
+.toolboxNewsdate {
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 90%;
+	font-weight: bold;
+	color: #990033;
+	padding: 5px 0 0 5px; 
+	margin: 0px;
+}
+
+#homeFooterNSIDC {
+	clear: both;
+	position: relative;
+	top: -6px;
+	margin: 0;
+	padding: 10px 0 0 10px;
+	border-top: 1px solid #000;
+}
+
+#homeTextNSIDC {
+	position: absolute;
+	top: 140px;
+	//top: 50px;
+	left: 4em;
+	width: 42%;
+	color: #FFFFFF;
+	font-family: Tahoma, Arial, Helvetica, sans-serif
+	font-size: 115%;
+}
+
+#homeDataBannerNSIDC {
+	position: relative;
+	top: 0;
+	//top: -1px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 105%;
+	font-weight: bold;
+	color: #FFFFFF;
+	padding: 0 4px;
+	//padding: 1px 4px;
+	margin: 0;
+	border-top: 1px solid #000;
+	background: url(/images/home/featuresBackgroundNSIDC.gif) top left no-repeat;
+	height: 28px;
+	//height: 27px;
+}
+
+#featurebanner {
+	position: relative;
+	top: 0;
+	//top: 8px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 105%;
+	font-weight: bold;
+	color: #FFFFFF;
+	padding: 0 4px;
+	//padding: 1px 4px;
+	margin: 0;
+	border-top: 1px solid #000;
+	/*border-bottom: 1px solid #000;*/
+	background: url(/images/home/featuresBackgroundNSIDC.gif) top left no-repeat;
+	height: 28px;
+	//height: 27px;
+}
+
+#homeNewsBannerNSIDC {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 105%;
+	font-weight: bold;
+	color: #FFFFFF;
+	padding: 0 4px;
+	//padding: 1px 4px;
+	margin: 0;
+	background: url(/images/home/newsBackgroundNSIDC.gif) top left no-repeat;
+	height: 27px;
+}
+
+#homeNewsContainerNSIDC {
+	border-left: 1px solid #000;
+	margin: 0;
+	padding: 0;
+}
+
+.homeFeatureBorderNSIDC {
+	border-right: 1px solid #000;
+}
+
+.homeHeadings {
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-weight: bold; 
+	color: #349134; /* green 8*/
+	/*color: #0366C8;*/ /* bright blue */
+	padding: 6px;
+}
+
+/* styles to control display of notices on the home page */
+
+#homeNoticesContainerNSIDC {
+	position: relative;
+}
+
+#homeNoticesContainerNSIDC p {
+	background: url(/images/home/noticesBackground3NSIDC.gif) top left no-repeat;
+	//background: url(/images/home/noticesBackground4NSIDC.gif) top left no-repeat;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 85%;
+	color: #990033;
+	padding: 40px 12px 0 12px;
+	margin: 0 0 20px 0;
+	font-weight: bold;
+	border-top: 1px solid #000;
+}
+
+
+
+/********************************************************************
+
+styles to control padding on quick search and home page content
+
+*********************************************************************/
+
+#quickSearchPaddingOffset {
+	padding: 4px 0 0 1px;
+}
+
+#inputOffsetLeft {
+	margin: 0;
+}
+
+#offsetLeft {
+	padding: 0 0 0 1px;
+}
+
+#homeQuickSearchContainerNSIDC {
+	padding: 10px 0 0 4px;
+}
+
+#homeMainContentContainerNSIDC {
+	padding: 10px 15px 0 15px;
+}
+
+#advancedSearchLinkContainer {
+	padding: 0 0 0 8px;
+}
+
+#homeToolboxNSIDC {
+	padding: 0 0 0 10px;
+}
+
+img.homeSponsorLogoNSIDC {
+	width: 90%;
+}
+
+span.homeLinkVertSpacer {
+	line-height: .5em;
+}
+
+/* replaces .nav1 for font of cardinal directions in quick searches */
+
+.quickSearchCardinalDirectionNSIDC {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 85%;
+	font-weight: bold;
+	color: #003366;
+	line-height: normal;
+	padding: 2px 0 4px 0;
+	margin: 0px 4px 0px 0px;
+	text-decoration: none;
+}
+
+
+/*****************************************
+
+Styles specific to Secondary level sites
+
+*****************************************/
+
+.secondarySiteHomeImageContainerNSIDC {
+	position: relative;
+	float: right;
+	padding: 0 0 35px 0;
+	margin: 0 0 10px 15px;
+	border: 1px solid #CCCCCC;
+}
+
+img.secondarySiteHomeImageNSIDC {
+	border-bottom: 1px solid #CCCCC;
+}
+
+
+.secondaryContentContainerNSIDC {
+	padding: 0 10px;
+	margin: 10px 0;
+}
+	
+.secondaryPageTitle {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 1.1em;
+	font-weight: bold;
+	color: #003366;
+	padding: 0 0 10px 0;
+	margin: 0;
+}
+
+.secondaryContentContainerNSIDC h4 {
+	padding: 0 0 5px 7px;
+	margin: 0;
+}
+
+.secondaryContentContainerNSIDC h5 {
+	padding: 0 0 5px 12px;
+	margin: 0;
+}
+
+.secondaryPageSubnavTitle {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 90%;
+	font-weight: bold;
+	color: #003366;
+	line-height: normal;
+	padding: 0 0 5px 5px;
+	margin: 0px;
+}
+
+/* this style is experimntal */
+.tertiaryTitle {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 90%;
+	font-weight: bold;
+	color: #003366;
+	line-height: normal;
+	padding-top: 0;
+	padding-bottom: 3px;
+	padding-left: 0;
+	margin: 0px;
+}
+
+/****************************************
+
+Secondary Navigation - left nav styles 
+
+****************************************/
+
+.secondaryNavContainerNSIDC {
+	padding: 0 10px 0 20px;
+}
+
+.secondaryNavContainerNSIDC a {
+	color: #330066;
+	text-decoration: none;
+}
+
+.secondaryNavContainerNSIDC a:hover {
+	color: #D53135;
+	text-decoration: underline;
+}
+
+.secondaryNavContainerNSIDC a:visited {
+	color: #330066;
+}
+
+.secondaryNavContainerNSIDC a:active {
+	color: #000;
+	text-decoration: none;
+}
+
+.secondaryNavList {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+	
+/* 
+Nav styles - Do not edit. These styles are used in the primary navigation
+as well as the secondary navigation links. Nav1-3 can be used in the vertical left
+navigation of data center pages. Nav4 can be used horizontally for sub-project
+navigation. 
+*/
+
+/* these styles are NOT used in the main navigation! */
+
+.nav1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 85%;
+	font-weight: bold;
+	color: #003366;
+	line-height: normal;
+	padding: 5px 0;
+	margin: 0px 4px 0px 0px;
+	text-decoration: none;
+}
+
+/* this class is for the top-most nav menu item in left subnavs ONLY if there is an icon above it */
+.nav1Top {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 85%;
+	font-weight: bold;
+	color: #003366;
+	line-height: normal;
+	padding: 0 0 5px 0;
+	margin: 10px 4px 0px 0px;
+	text-decoration: none;
+}
+
+.nav2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 82%;
+	font-weight: normal;
+	color: #003366;
+	line-height: normal;
+	padding: 2px 0;
+	margin: 0px 4px 0px 12px;
+}
+
+/* this class is for the last menu item in the second level of left subnavs, if it is followed by another subnav item */
+.nav2Last {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 82%;
+	font-weight: normal;
+	color: #003366
+	line-height: normal; 
+	padding: 2px 0 5px 0;
+	margin: 0px 4px 0px 12px;
+}
+
+.nav3 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 82%;
+	font-weight: normal;
+	color: #003366;
+	line-height: normal;
+	padding-top: 0px;
+	padding-bottom: 3px;
+	margin: 0px 4px 0px 20px;
+	padding-right: 0px;
+}
+
+.nav4 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 82%;
+	font-weight: normal;
+	color: #003366;
+	line-height: normal;
+	padding-top: 0px;
+	padding-bottom: 3px;
+	margin: 0px 8px 0px 0px;
+	padding-right: 0px;
+}
+
+.activeNav1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 85%;
+	font-weight: bold;
+	color:#3680ca;
+	line-height: normal;
+	padding: 5px 0;
+	margin: 0px 4px 0px 0px;
+	text-decoration: none;
+}
+
+.activeNav1 a {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	font-weight: bold;
+	color:#3680CA;
+	line-height: normal;
+	padding: 5px 0;
+	margin: 0px 4px 0px 0px;
+	text-decoration: none;
+}
+
+.activeNav1 a:visited {
+	color: #3680CA;
+}
+
+.activeNav1 a:hover {
+	color: #D53135;
+	text-decoration: underline;
+}
+
+.activeNav1Top {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 85%;
+	font-weight: bold;
+	color:#3680ca;
+	line-height: normal;
+	padding: 10px 0 5px 0;
+	margin: 0px 4px 0px 0px;
+	text-decoration: none;
+}
+
+.activeNav1Top a:visited {
+	color: #3680CA;
+}
+
+.activeNav1Top a:hover {
+	color: #D53135;
+	text-decoration: underline;
+}
+	
+.activeNav2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 82%;
+	font-weight: normal;
+	color:#3680ca;
+	line-height: normal;
+	padding: 2px 0;
+	margin: 0px 4px 0px 12px;
+	text-decoration: none;
+}
+
+
+.activeNav2 a {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	font-weig	ht: normal;
+	color:#3680ca;
+	line-height: normal;
+	padding: 2px 0;
+	margin: 0 4px 0 0;
+	text-decoration: none;
+}
+
+.activeNav2 a:hover {
+	color: #D53135;
+	text-decoration: underline;
+}
+.activeNav2 a:visited {
+	color: #3680CA;
+}
+
+
+
+.activeNav2Last {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 82%;
+	font-weight: normal;
+	color:#3680ca;
+	line-height: normal;
+	padding: 2px 0 5px 0;
+	margin: 0px 4px 0px 12px;
+	text-decoration: none;
+}
+
+
+.activeNav2Last a {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	font-weight: normal;
+	color:#3680ca;
+	line-height: normal;
+	padding: 2px 0 5px 0;
+	margin: 0px 4px 0px 12px;
+	text-decoration: none;
+}
+
+.activeNav2Last a:visited {
+	color: #3680CA;
+}
+
+.activeNav2Last a:hover {
+	color: #D53135;
+}
+
+
+/********************************
+
+Secondary Headings
+
+********************************/
+
+
+.secondaryHeadingContainer {
+	position: relative;
+	top: -6px;
+	padding: 0;
+	margin: 0 0 15px 0; /* bottom margin replaces breadcrumb */
+	/* border-bottom: 1px solid #CCCCCC;*/ /* bottom border for secondary heading container */
+	white-space: none;
+}
+
+.secondaryHeadingRight {
+	background: #9FB3CA;
+	height: 56px;
+	padding: 0 0 0 75px;
+}
+
+.secondaryHeadingLeft {
+	width: 151px;
+	height: 56px;
+	background: #4981A6;
+}
+
+.secondaryHeadingDivider {
+	width: 2px;
+	background: #FFFFFF;
+}
+
+.secondaryHeadingLink {
+	text-align: center;
+	vertical-align: middle;
+}
+
+.secondaryHeadingLink a {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: .8em;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.secondaryHeadingLink a:hover {
+	text-decoration: underline;
+	color: #FFFFFF;
+}
+
+/* secondary heading styles below are not currently in use except for AGDC and Glacier Photo site 2/25/08 ST */ 	
+.secondaryHeadingTitleContainer {
+	background: #e5e5e5;
+	padding: 0;
+	margin: 0;
+}
+	
+.secondaryHeadingTitle {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 2em;
+	font-weight: bold;
+	/*letter-spacing: .1em;*/
+	color: #003366;
+	padding: 15px 0 0 20px;
+}
+
+
+.secondaryQuoteContainer {
+	padding: 0;
+	margin: 0;
+	border-left: 1px solid #CCCCCC;
+}
+
+.secondaryQuote {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 80%;
+	color: #333333;
+	padding: .5em 1em 0 1em;
+	margin: 0;
+}
+
+.quoteCredit { font-family: Arial, Helvetica, sans-serif; font-size: 1em; color: #666666; }
+
+
+
+/******************************************
+
+Secondary Content styles
+
+******************************************/
+
+.mainContentContainerNSIDC {
+	position: relative;
+	top: -6px;
+}
+
+.secondaryContentContainerNSIDC {
+	position: relative;
+	top: -6px;
+}
+
+.contentMainLeft {
+	width: 80%;
+	border: 1px solid #CCCCCC;
+	border-right: 0;
+	padding-right: 10px;
+}
+
+.contentMainLeft h2, .contentMainLeft h3, .contentMainLeft h4 {
+	margin: 5px 0 7px 20px;
+}
+
+.contentMainLeft > p {
+	margin: 0 10px 0 0;
+}
+
+/************************************************
+
+secondary heading styles for specific sub-sites
+
+************************************************/
+
+/* Glacier Photo heading */
+
+#glacierPhotoHeading {
+	border-bottom: 1px solid #CCCCCC; /* bottom border for secondary heading container */
+}	
+
+/* Arctic Sea Ice News */
+
+#arcticSeaIceNewsContentContainer {
+	position: relative;
+	top: -12px;
+}
+
+
+/***********************
+
+secondary site toolbox
+
+***********************/
+
+.secondaryToolboxContainerNSIDC {
+	border: 1px solid #CCCCCC; 
+	padding: 10px;
+	margin: 0 0 10px 0;
+	//text-align: left;
+}
+
+.secondaryToolboxContainer {
+	border: 1px solid #CCCCCC; 
+	padding: 0;
+	margin: 0;
+	//text-align: left;
+}
+
+/*
+.toolboxContent {
+	padding: 10px 5px 10px 10px;
+}
+*/
+
+.secondaryToolboxHeading {
+	background: url(/images/global/toolbox_heading_bg.jpg) top left no-repeat; 
+	height: 30px;
+	padding: 0;
+	margin: 5px;
+	border-top: 1px solid #CCCCCC;
+}
+
+.secondaryToolboxTitle {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	font-weight: normal;
+	color: #502680;
+	padding: 2px 0 0 10px;
+	margin: 0;
+}
+
+#catalogBrowseTitle {
+	margin-top: 7px;
+}
+
+.toolboxLink {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 85%;
+	font-weight: bold;
+	color: #003366;
+	padding: 5px 12px 0px 12px!important;
+	margin: 0;
+	text-decoration: none;
+}
+
+.toolboxLink:hover {
+	text-decoration: underline;
+	color: #307CD2;
+}
+
+.toolboxText {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .88em;
+	font-weight: normal;
+	color: #000000;
+	padding: 5px 12px 3px 12px!important;
+	margin: 0;
+}
+
+.toolboxFormHeading {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: .9em;
+	color: #000;
+	padding: 5px 5px 5px 12px;
+}
+
+.toolboxContent {
+	padding: 5px 0;
+	border-top: 1px solid #CCCCCC;
+}
+
+.rssImage {
+	padding: 0 0 0 12px;
+}
+
+
+/************************
+
+toolbox IDs
+
+************************/
+
+#seealso {
+	color: #006699; 
+}
+
+#resources {
+	color: #85B000;
+}
+
+#contacts {
+	color: #85B000;
+}
+
+/****************
+
+Footer styles 
+
+****************/
+
+
+/* footer container */
+#footerNSIDC {
+	position: relative;
+	top: 0;
+	margin: 0;
+	padding: 10px 0 0 10px;
+	border-top: 1px solid #999999;
+	clear: both;
+}
+
+.footerTitleTextNSIDC {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 85%;
+	font-weight: bold;
+	color: #003366;
+}
+
+#sponsorsContainerNSIDC {
+	margin: 0;
+	padding: 0 .8em;
+}
+
+/***********************************************************
+ 
+ 
+Revised css styles and new styles added Jan 2007
+
+In general, all headings are Verdana, all body text is Arial.
+All small font styles are Verdana because the font is 
+more legible at small sizes.
+
+
+***********************************************************/
+
+/********
+
+Forms
+
+********/
+
+
+/* Input - automatically assigned to form elements with input tag. */
+
+INPUT { 	
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 83%;
+	color: #333333;
+	font-weight: normal;
+	padding: 0px 0px 0px 4px;
+	margin-left: 4px;
+}
+
+.selectDefault {
+	color: 333333;
+	font-style: italic;
+	font-size: .85em;
+}
+
+
+/***********************************
+
+Press Release pages 
+
+***********************************/
+
+div.inlineImageRight {
+	position: relative;
+	width: 40%;
+	float: right;
+	/*clear: both;*/
+	padding: 5px 10px;
+	display: block;
+}
+
+div.inlineImageLeft {
+	position: relative;
+	width: 40%;
+	float: left;
+	padding: 5px 10px;
+	display: block;
+}
+
+#figureText {
+	display: block;
+}
+
+.pressReleaseTitle {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #003366;
+}
+
+.pressReleaseByline {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: .9em;
+	font-weight: bold;
+	color: #003366;
+}
+
+.pressReleaseDate {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: .9em;
+	font-weight: bold;
+	color: #003366;
+}
+
+
+/************************************************
+
+Photo Gallery
+
+styles for home page slideshow pop-up pages
+
+************************************************/
+
+
+.slideImage { /* keep */
+	border: 1px solid #CCCCCC;
+}
+
+.slideshowCaption { /* keep */
+	font-size: 85%;
+}
+
+.homeSlidesGalleryContainer { /* keep */
+	 /* border: 1px solid #CCCCCC; */
+	 width: 508px;
+	 padding: 5px 16px 0 0;
+	 text-align: left;
+	 position: relative;
+	 top: 5px;
+	 left: 8px;
+	 //left: 0;
+}
+
+.homeSlidesGalleryControls { /* keep */
+	padding: 0 8px 0 0;
+}
+
+.homeSlidesGalleryImageContainer { /* keep */
+	padding: 0 0 3px 0;
+}
+
+.homeSlidesGalleryCaptionContainer { /* keep */
+	padding: 10px 0 5px 2px;
+	//padding: 20px 0 5px 2px;
+	//margin: 10px 0;
+}
+
+
+
+/***********************************
+
+
+Miscellaneous formatting styles
+
+
+***********************************/
+
+/*
+Pagetitle is used for all level one page titles:
+About NSIDC, Science, Publications, etc.
+Do not use this style with the <p> tag. 
+*/
+
+/* currently this style is MOSTLY applied to <p> tags! applied in a few cases to h2, in some instances as a fix for IE7 which was PREVIOUSLY not rendering this style. 2/25/08 ST*/
+
+.pagetitle {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 140%;
+	font-weight: bold;
+	color: #003366;
+	padding: 10px 10px 5px 10px;
+	margin: 0 0 15px 0;
+	border-bottom: 1px solid #999999;
+}
+
+.pagetitle a {
+	text-decoration: none;
+}
+
+.pagetitle a:visited {
+	color: #003366;
+}
+
+.pagetitle a:hover {
+	color: #006699;
+}
+
+/*****************************
+
+simple float for <p> or <div>
+
+*****************************/
+
+.floatLeft {
+	position: relative;
+	float: left;
+}
+
+.floatRight {
+	position: relative;
+	float: right;
+}
+
+.oneHundredPercent {
+	width: 100%;
+}
+
+/*******************************************
+
+new class to offset padding on newly styled 
+
+<p> tags when combined with old I1 class
+
+*******************************************/
+
+.paragraphOffsetLeft {
+	margin: 0 0 0 -2%;
+}
+
+/*
+Do not edit the following tag.
+A font size specification was previously
+associated with the following tags.
+It has been removed as of Jan 2007
+to accomodate the new primary navigation and body style.
+A margin was added at the bottom to provide space 
+under data tables.
+
+*/
+
+
+table {
+	font-family:  arial, helvetica, sans-serif;
+	margin: 0 0 6px 0;
+} 
+ 
+
+/* style for "top" anchor link */
+.topAnchor {
+	font-size: small
+}
+
+
+/*****************************
+
+new class to fix position
+
+of All About Banners
+
+******************************/
+
+.allAboutSiteHeading {
+	position: relative; 
+	top: -6px;
+}
+
+/*****************************
+
+fix for position
+
+of Data subsite banners
+
+******************************/
+
+.dataSiteHeading {
+	position: relative; 
+	top: -6px;
+}
+
+
+/******************************
+
+Bio Template Styles
+
+******************************/
+#bioNavOuterContainer {
+	float: right; 
+	padding: 0 0 10px 0; 
+	border: 0;
+	margin: 0 0 10px 7px;
+}
+
+#bioNavContainer {
+	padding: 12px 0 0 0; 
+	border: 1px solid #CCCCCC;
+	clear: both;
+	margin-top: 10px;
+}
+
+#bioImageContainer {
+	padding-top: 0;
+}
+
+.bioNav {
+	font-size: .8em;
+}
+
+.scientistGeneralInfo {
+	padding: 7px;
+}
+
+.biblioInfo {
+	margin-left:.5in;
+	text-indent:-.31in;
+}
+
+
+/******************************
+
+Styles for Notices
+
+used for downtime notices
+
+******************************/
+
+
+/* styles to control display of notices on the Advamced Search page */
+
+#dataNoticesContainer {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 98%;
+
+}
+
+#dataNoticesContainer p {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #990033;
+	padding: 7px 0 0 10px;
+	//padding: 0 2% 1% 1%;
+	margin: 0;
+	font-weight: bold;
+}
+
+#ecsNoticesContainer {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 98%;
+
+}
+
+#ecsNoticesContainer p {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #990033;
+	padding: 7px 0 0 10px;
+	//padding: 0 2% 1% 1%;
+	margin: 0;
+	font-weight: bold;
+}
+
+/***********************************
+
+style for development server tag
+
+DO NOT REMOVE
+
+***********************************/
+
+.newiceTag {
+	position: relative;
+	top: -5px;
+	height: 1em;
+	//height: 0;
+	padding: 3px 10px 0 0;
+	margin: 0;
+	white-space: nowrap;
+	z-index: 0;
+}
+
+.devTagContainer {
+	border-bottom: 1px solid #000;
+	height: 55px;
+	width: 55px;
+}
+
+/***********************************
+
+OLD UNEDITED NSIDC styles
+
+DO NOT REMOVE - still widely used
+
+***********************************/
+
+.NavLinksNSIDC { font-family:Arial,Helvetica,sans-serif; font-size:8pt; color:#ffffff; text-decoration:none; }
+a.NavLinksNSIDC { font-family:Arial,Helvetica,sans-serif; font-size:8pt; color:#ffffff;	text-decoration:none; }
+a.NavLinksNSIDC:visited	{ font-family:Arial, Helvetica,sans-serif; font-size:8pt; color:#ddffdf; text-decoration:none; }
+a.NavLinksNSIDC:active { font-family:Arial,Helvetica,sans-serif; font-size:8pt; color:#cccc99; text-decoration:underline; }
+a.NavLinksNSIDC:hover { font-family:Arial,Helvetica,sans-serif; font-size:8pt; color: #cccc99; text-decoration:underline; }
+
+
+/*FigureCaption - is used inconsistently on our site.
+We should consider using SmallTextGray instead for
+all new applications.*/
+.FigureCaption
+	{
+	font-size:85%;
+	font-family: arial, helvetica, sans-serif;
+	line-height:100%;
+	margin-left:50px;
+	margin-right:50px;
+	}
+	
+/*NSIDCNoteTOC - used in the publications/notes section.
+While we no longer post NOTES as HTML (a PDF is posted)
+there are years of archive NOTES as HTML and NOTES
+may be posted online again in the future.*/
+.NSIDCNotesTOC
+	{
+	background-color:#D4E8EB;
+	/* border-width:1px;
+	border-style:solid; */
+	border-color:#0f4d6d;
+	font-size:90%;
+	font-family:arial, helvetica, sans-serif;
+	line-height:100%;
+	margin-top:9px;
+	margin-bottom:6px;
+	margin-left:12px;
+	padding: 3px 9px 3px 9px;
+	}
+
+
+/* from seaice_old.css, still used at the moment, do not remove. 4.06.07 ST. */
+.second_nav { 
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-weight: bold;
+}
+
+/********************************
+
+styles for NASA banner logo
+
+********************************/
+
+.nasaLogo {
+	text-align:right; 
+	padding: 0 5px 0 0; 
+	margin-bottom: -42px; 
+	position: relative; 
+	top: -46px;
+}
+
+#secondary {
+	position: relative;
+	top: -50px;
+}
+
+#mist {
+	position: relative; 
+	top: -50px;
+}
+
+/*****************************
+
+NEW global styles Winter 2008
+
+******************************/
+
+
+.topLink { /* for links at the top of  guide doc pages */
+	position: relative;
+	top: -25px;
+	margin: 0 10;
+}
+
+.tmb {
+	margin-right: 10px;
+}
