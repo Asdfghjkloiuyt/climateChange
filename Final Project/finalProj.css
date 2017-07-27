@@ -1,0 +1,224 @@
+body{
+    background:rgb(255,255,255) no-repeat center center fixed;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size: cover;
+}
+h1{
+  text-align:center;
+  color:white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/*........................Sidebar.........................*/
+div.tab {
+    display:block;
+    position: absolute;
+    z-index:1;
+    overflow: auto;
+    float: left;
+    border-top: none;
+    border: 1px solid #ccc;
+    border-left:none;
+    background-color: #f1f1f1;
+    width: 10%;
+    height: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    transition: 0.6s;
+    border-radius: 0px 40px 40px 0px;
+}
+.tab:hover {
+    border-radius: 0px;
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+div.tab button.active {
+    background-color: #ccc;
+}
+
+/*.......................... Style the tab content............................. */
+.tabcontent {
+    text-align:center;
+    position: absolute;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-right: none;
+    z-index: 0;
+    height: 60%;
+    color: black;
+    background: none;
+    width: 87.5%;
+    margin-left: 10%;
+}
+#tabBg{
+    background-image: url("http://www.highnorthnews.com/wp-content/uploads/2016/02/Cover-Image.jpg");
+    background-size: cover;
+    color: white;
+}
+#tabBg:hover{
+    background-image: url("http://www.ekologija.rs/http://www.ekologija.rs/wp-content/uploads//2012/03/melting-ice-arctic-475x250_tcm4-564050.jpg");
+}
+#tabBg.active{
+    background: #ccc;
+}
+#wordBg{
+    background-color: rgba(204,204,204,0.75 );
+    background-size: cover;
+    font-size: 100%;
+    color: black;
+}
+#wordBg.active{
+    background:none;
+}
+#tabBgg{
+    background-image: url("http://www.livemint.com/rf/Image-621x414/LiveMint/Period1/2013/02/06/Photos/Polar%20Bear--621x414.jpg");
+    background-size:cover;
+    color:white;
+}
+#tabBgg:hover{
+    background-image: url("http://climatenewsnetwork.net/wp-content/uploads/2015/10/Melting-ice-polar-bear.jpg");
+    background-position-y: 120px;
+}
+#tabBgg.active{
+    background: #ccc;
+}
+#tabBggg{
+    background-image: url("http://dreamatico.com/data_images/sea/sea-8.jpg");
+    background-size: cover;
+    color: white;
+}
+#tabBggg:hover{
+    background-image: url("https://s-media-cache-ak0.pinimg.com/originals/19/c7/6a/19c76a6d215525e3a510124c5bacc443.jpg")
+}
+#tabBggg.active{
+    background: #ccc;
+}
+#ttabBg{
+    background-image: url("aw.jpeg");
+    background-size: cover;
+    color: white;
+}
+#ttabBg:hover{
+    background-image: url("bw.jpeg")
+}
+#ttabBg.active{
+    background: #ccc;
+}
+/*............................Home Content............................*/
+#Home{
+  color: black;
+  background-color: white;
+  text-align:center;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-right: none;
+  position: absolute;
+  height:100%;
+}
+/*-------Timeline Decor----*/
+
+div.timeline button{
+    border-radius: 100%;
+    width:45px;
+    height:45px;
+    margin:8px;
+    font-weight: bold;
+    font-size: 15x;
+    text-align: center;
+    vertical-align: middle;
+    font-family: Courier New, Courier, monospace;
+}
+div.timeline button:hover{
+    background:rgba(150, 150, 150, 0.8);
+}
+div.timeline button.active{
+    background: rgba(50, 50, 50, 0.8);
+    color:white;
+}
+.timec{
+    text-align:center;
+    position: absolute;
+    color: black;
+    background: none;
+    width: 50%;
+    margin-left: 10%;
+}
+/*...............................................GLOBE...........................................*/
+#earth_div{
+top: 0;
+right: 0;
+ bottom: 0;
+ left: 0;
+ position: absolute !important;
+}
+html, body{padding: 0; margin: 0;}
+
+/* ...................About Page with Form .......................*/
+#About{
+height:100%;
+}
+/*#arcticImg{
+  height:80px;
+  width:100px;
+  text-align: center;
+  border-radius: 15px;
+}*/
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #604975;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #663366;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-top: 50px;
+}
+label{
+  cursor:default;
+  color:black;
+}
