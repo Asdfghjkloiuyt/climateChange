@@ -2,20 +2,17 @@
 <html>
 
 <head>
+  <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="finalProj.css">
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
-          <script src="finalProj.js"></script>
+  <script src="finalProj.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="../projectMonse/graphs0.js"></script>
+ 
+
           <script src="http://www.webglearth.com/v2/api.js"></script>
-                <script>
-              function initialize() {
-                var earth = new WE.map('earth_div');
-                WE.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
-                  attribution: '© OpenStreetMap contributors'
-                }).addTo(earth);
-              }
-            </script>
   <title>Climate Change</title>
   <link rel="icon" href="http://www.clker.com/cliparts/b/a/P/3/L/8/earth-cartoon-hi.pngg">
 </head>
@@ -28,6 +25,9 @@
 <div class="content">
       <div class="tab">
       <button class="tablinks" onclick="openCity(event, 'Home')" id="defaultOpen">Home</button>
+      <button id="tttabBg"class="tablinks" onclick="openCity(event, 'carbon')">
+        <div id="wordBg">Carbon Dioxide Levels</div>
+        </button>
       <button id= "tabBg" class="tablinks" onclick="openCity(event, 'Arctic')">
         <div id="wordBg">Arctic Ice</div>
       </button>
@@ -70,9 +70,12 @@
             <div id="thousands" class="timec"></div>
             <div id="tens" class="timec"></div>
             <div id="sixteen" class="timec"></div>
+        <div id=TEMP></div>
+        </div>
+       
+      <div id="carbon" class="tabcontent">
 
         </div>
-
 
       <div id="Arctic" class="tabcontent">
       <h3>Arctic Ice</h3>

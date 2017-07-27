@@ -120,9 +120,20 @@ div.tab button.active {
     color: white;
 }
 #ttabBg:hover{
-    background-image: url("bw.jpeg")
+    background-image: url("bw.jpeg");
 }
 #ttabBg.active{
+    background: #ccc;
+}
+#tttagBg{
+    background-image: url("http://dujs.dartmouth.edu/wp-content/uploads/13_74_25_web.jpg");
+    background-size:cover;
+    color:white;
+#tttabBg:hover{
+    background-image: url("http://dingo.care2.com/pictures/causes/3203/3202416.large.jpg");
+    background: 
+}
+#tttabBg.active{
     background: #ccc;
 }
 /*............................Home Content............................*/
