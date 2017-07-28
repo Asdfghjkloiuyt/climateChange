@@ -70,6 +70,7 @@ div.tab button.active {
     background: none;
     width: 87.5%;
     margin-left: 10%;
+    border-bottom: none;
 }
 #tabBg{
     background-image: url("http://www.highnorthnews.com/wp-content/uploads/2016/02/Cover-Image.jpg");
