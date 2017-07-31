@@ -38,13 +38,30 @@
   globe.projection.scale(175).translate([175, 175]).rotate([0, -10, 0]);
 
   // Every few hundred milliseconds, we'll draw another random ping.
-  var colors = ['red', 'yellow', 'white', 'orange', 'green', 'cyan', 'pink'];
-  setInterval(function() {
-    var lat = Math.random() * 170 - 85;
-    var lng = Math.random() * 360 - 180;
-    var color = colors[Math.floor(Math.random() * colors.length)];
-    globe.plugins.pings.add(lng, lat, { color: color, ttl: 2000, angle: Math.random() * 10 });
-  }, 150);
+ // var colors = ['red', 'yellow', 'white', 'orange', 'green', 'cyan', 'pink'];
+ d3.csv('globalData-1850-01-16.csv', function(rows){
+    console.log(rows);
+    var lats = Object.keys(rows);
+    for(latInd = 0; latInd < lats.length-1; latInd++) {
+      console.log(lats.length);
+        var lat = rows[latInd][""];
+        var lngs = Object.keys(rows[latInd]);
+        for (lngInd = 1; lngInd < lngs.length; lngInd++) {
+            var lng = lngs[lngInd];
+            var val = rows[latInd][lng];
+            var color;
+            if (val != "NA") {
+                if(val > 0){
+                    color = 'red';
+                }
+                else {
+                    color = 'blue';
+                }
+                globe.plugins.pings.add(parseInt(lng), parseInt(lat), { color: color, ttl: 200000, angle: 5}); 
+            }
+    } 
+    }
+});
 
   var canvas = document.getElementById('rotatingGlobe');
   // Special code to handle high-density displays (e.g. retina, some phones)

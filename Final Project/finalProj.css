@@ -1,3 +1,4 @@
+
 body{
     background:rgb(255,255,255) no-repeat center center fixed;
     -webkit-background-size:cover;
@@ -9,6 +10,18 @@ h1{
   text-align:center;
   color:white;
   background-color: rgba(0, 0, 0, 0.5);
+  font-size: 30px;
+}
+p{
+    text-indent: 40px;
+    text-align:left;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+ul{
+    text-align: left;
+   font-size: 18px;
 }
 /*........................Sidebar.........................*/
 div.tab {
@@ -133,7 +146,6 @@ div.tab button.active {
 }
 #tttabBg:hover{
     background-image: url("http://dingo.care2.com/pictures/causes/3203/3202416.large.jpg");
-    background: 
 }
 #tttabBg.active{
     background: #ccc;
@@ -178,16 +190,22 @@ div.timeline button.active{
     width: 50%;
     margin-left: 10%;
 }
-/*...............................................GLOBE...........................................*/
-#earth_div{
-top: 0;
-right: 0;
- bottom: 0;
- left: 0;
- position: absolute !important;
+/*---------------------------------------------Graphs----------------------------------------------*/
+#TEMP{
+        display : inline;
+    position:relative;
+    left:50px;
+    
 }
-html, body{padding: 0; margin: 0;}
-
+#landIce{
+    text-align: center;
+}
+/*...............................................GLOBE...........................................*/
+#rotatingGlobe{
+       display : inline;
+    position:relative;
+    left:50px;
+}
 /* ...................About Page with Form .......................*/
 #About{
 height:100%;
@@ -234,4 +252,16 @@ input[type=submit]:hover {
 label{
   cursor:default;
   color:black;
+}
+/*------------------------------Images-------------------------------------------*/
+.speak{
+    text-align: justify;
+    width: 250px;
+}
+.speak img {
+    display: block;
+    margin: 0 auto;
+    border: 2px solid whitesmoke;
+    height: 250px;
+    text-align: center;
 }
