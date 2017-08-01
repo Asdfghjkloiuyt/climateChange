@@ -19,9 +19,10 @@ p{
     line-height: 20px;
 }
 
-ul{
+li{
     text-align: left;
    font-size: 18px;
+
 }
 /*........................Sidebar.........................*/
 div.tab {
@@ -165,8 +166,8 @@ div.tab button.active {
 /*-------Timeline Decor----*/
 
 div.timeline button{
-    border-radius: 100%;
-    width:45px;
+    border-radius: 90%;
+    width:55px;
     height:45px;
     margin:8px;
     font-weight: bold;
@@ -190,22 +191,27 @@ div.timeline button.active{
     width: 50%;
     margin-left: 10%;
 }
+
 /*---------------------------------------------Graphs----------------------------------------------*/
 #TEMP{
-        display : inline;
+    display : inline;
     position:relative;
     left:50px;
-    
+    overflow: hidden;
 }
 #landIce{
     text-align: center;
 }
 /*...............................................GLOBE...........................................*/
 #rotatingGlobe{
-       display : inline;
+    display: inline;
     position:relative;
-    left:50px;
+    overflow: hidden;
+    text-align:center; 
+    left: 220px;
+ 
 }
+
 /* ...................About Page with Form .......................*/
 #About{
 height:100%;
@@ -259,9 +265,9 @@ label{
     width: 250px;
 }
 .speak img {
-    display: block;
-    margin: 0 auto;
-    border: 2px solid whitesmoke;
+        border: 2px solid whitesmoke;
+    border-radius: 10px;
     height: 250px;
-    text-align: center;
+        vertical-align: middle;
+
 }

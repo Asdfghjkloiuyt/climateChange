@@ -32,7 +32,7 @@
       <div class="tab">
       <button class="tablinks" onclick="openCity(event, 'Home')" id="defaultOpen">Home</button>
       <button id="tttabBg"class="tablinks" onclick="openCity(event, 'carbon')">
-        <div id="wordBg">Carbon Dioxide Levels</div>
+        <div id="">Causes</div>
         </button>
       <button id= "tabBg" class="tablinks" onclick="openCity(event, 'Arctic')">
         <div id="wordBg">Arctic Ice</div>
@@ -45,13 +45,14 @@
       </button>
       <button id="ttabBg"class="tablinks" onclick="openCity(event, 'Solutions')">
        <div id="wordBg">What you can do</div></button>
-      <button class="tablinks" onclick="openCity(event, 'About')">About/Feedback</button>
+             <button class="tablinks" onclick="openCity(event, 'Feedback')">Feedback</button>
+      <button class="tablinks" onclick="openCity(event, 'About')">About</button>
       <button class="tablinks" onclick="openCity(event, 'credits')">Credits</button>
       </div>
 
         <div id="Home" class="tabcontent">
           <div class= "timeline">
-            <button class="timelink" onclick="openTime(event, 'eighty')">1850</button>
+            <button class="timelink" onclick="openTime(event, 'eighty')"id="defOpen">1850</button>
             <button class="timelink" onclick="openTime(event, 'hun')">1900</button>
             <button class="timelink" onclick="openTime(event, 'twenties')">1920</button>
             <button class="timelink" onclick="openTime(event, 'fourties')">1940</button>
@@ -59,11 +60,15 @@
             <button class="timelink" onclick="openTime(event, 'eighties')">1980</button>
             <button class="timelink" onclick="openTime(event, 'thousands')">2000</button>
             <button class="timelink" onclick="openTime(event, 'tens')">2010</button>
-            <button class="timelink" onclick="openTime(event, 'sixteen')" id="defOpen">2016</button>
+            <button class="timelink" onclick="openTime(event, 'sixteen')">2016</button>
+            <button class="timelink" id="graph" onclick="openTime(event, 'svnteen')" >17' Graph</button>
+
           </div>
             <div id="eighty" class="timec"> 
-               <canvas id='rotatingGlobe' width='400' height='400'
-  style='width: 400px; height: 400px; cursor: move;'></canvas>
+              <p style="color:red; margin-top:20px">Increase in Temp</p>
+              <p style="color:blue">Decrease in Temp</p>
+               <canvas id='rotatingGlobe' width='500' height='500'
+  style='width: 500px; height: 500px; cursor: move;'></canvas>
             </div>
             <div id="hun" class="timec">
               <p>hjjhbnvgfc</p>
@@ -71,21 +76,42 @@
             <div id="twenties" class="timec">
               <p>fwefa</p>
             </div>
-            <div id="fourties" class="timec"></div>
-            <div id="sixties" class="timec"></div>
-            <div id="eighties" class="timec"></div>
-            <div id="thousands" class="timec"></div>
-            <div id="tens" class="timec"></div>
-            <div id="sixteen" class="timec"></div>
-        <div id=TEMP></div>
+            <div id="fourties" class="timec">
+              Not  Done.
+            </div>
+            <div id="sixties" class="timec">  
+               Not  Done.
+            </div>
+            <div id="eighties" class="timec">
+                            Not  Done.
+
+            </div>
+            <div id="thousands" class="timec">
+                            Not  Done.
+
+            </div>
+            <div id="tens" class="timec">
+                            Not  Done.
+
+            </div>
+            <div id="sixteen" class="timec">
+                            Not  Done.
+
+            </div>
+            <div id="svnteen" class="timec">
+                      <div id=TEMP></div>
+            </div>
         </div>
        
       <div id="carbon" class="tabcontent">
+        <h2>Causes of Climate Change</h2>
+        <p>
+Climate change are mainly affected by human activities who are changing the greenhouse gases. The greenhouse gases are very important to the atmosphere. They are the ones that keep the warmth of the earth by trapping the heat, then absorbing it in a constant cycle. The greenhouse gases are made up of water vapor, methane, ozone, nitrous oxide, and carbon dioxide. Although, the greenhouse gases keep earth’s warm temperature, our atmosphere contains carbon dioxide, methane and other gases that prevent energy from exiting back into space that will result in the rise of temperature. The earth is made up of different gases, some that are abundant to the atmosphere such as nitrogen, oxygen, and argon. The greenhouse gases such as water vapor, carbon dioxide, and methane occupy a small percent in the atmosphere but yet play the most important role in the causes of global warming due to the fact that they trap the earth’s heat. Water vapor is the most abundant but as the temperature rises, so will the water causing sea level rise. Although, methane doesn’t take up that much in the atmosphere, it is the one that traps the energy. In the atmosphere, carbon dioxide is the less harmful and it is released in many different ways it doesn’t trap the heat as much as methane, but since it is a source that is used so much by humans it becomes harmful to humans, plants and the animals. Human activities such as excessive use of transportation which burns fossil fuels containing coal, oil. Cement production and deforestation are examples of human activities that endanger and cause climate change. </p>
       <div id=co2Data></div>
       </div>
 
       <div id="Arctic" class="tabcontent">
-      <h3>Arctic Ice</h3>
+      <h2>Arctic Ice</h2>
       <p>
          The Arctic is an ocean consisting mostly of sea ice in the North pole and  holds a unique and diverse biome with species that are only able to survive there. It is a semi-enclosed ocean that is surrounded by unfrozen land. It’s annual temperature is -40 degrees fahrenheit during winter and during the summer it is 32 degrees fahrenheit which is significantly warm, increasing 5 degrees since 2000. The Arctic’s ice is melting two times faster than scientist had predicted and the primary reason for the speed the ice is melting at is global warming, as the air and sea temperatures increase the water is not cold enough for the ice to remain frozen or build up. Although it’s enclosed surroundings allow for the ice to bump into each other and pile up to become thicker. During the winter season when the sea temperature is cold enough to freeze water is getting short which will only result in smaller ice floes. The loss of ice in the arctic will have significant effects on the water temperature, climate, ocean currents and  a huge imbalance in the arctic's ecosystem.
       </p>
@@ -93,10 +119,10 @@
       </div>
 
       <div id="Land" class="tabcontent">
-      <h3>Land Ice</h3>
+      <h2>Land Ice</h2>
       <p>
-        The most significant contributor to the critical rise in sea level, and a significant piece of evidence of climate change is the melting land ice. Land ice includes glaciers and ice sheets that cover areas such as Antarctica and Greenland. The exposure of land ice to heat results in it melting and due to the rise in temperature over the years, land ice has been melting at an alarming rate. According to NASA, the ice mass of Antarctica has been dropping at a rate of 125.0 ± 39 Gigatonnes per year and the ice mass of Greenland has been dropping at a rate of 287.0 Gigatonnes per year with a margin of ±21 since 2002. One gigatonne is equivalent to 2204622621848.8 lbs, so imagine how much ice is being lost per year! 
-        Upon melting, the water from the ice travels rapidly to the sea, filling it up and causing a rise in the sea level. (To see the effects of the rise in sea level, click on the sea level tab.) The rise in  sea level and the massive lost of land ice demonstrates the dire effects of climate change. 
+        The most significant contributor to the critical rise in sea level and a significant piece of evidence of climate change is the melting land ice. Land ice includes glaciers and ice sheets that cover areas such as Antarctica and Greenland. The exposure of land ice to heat results in it melting and due to the rise in temperature over the years, land ice has been melting at an alarming rate. According to NASA, the ice mass of Antarctica has been dropping at a rate of 125.0 ± 39 Gigatonnes per year and the ice mass of Greenland has been dropping at a rate of 287.0 Gigatonnes per year with a margin of ±21 since 2002. One gigatonne is equivalent to 2204622621848.8 lbs, so imagine how much ice is being lost per year! 
+        Upon melting, the water from the ice travels rapidly to the sea, filling it up and causing a rise in the sea level. (To see the effects of the rise in sea level, click on the sea level tab.) The rise in  sea level and the massive loss of land ice demonstrates the dire effects of climate change. 
         
        <p>So how does the melting land ice affect us?</p>
       <ul>
@@ -108,7 +134,7 @@
       </div>
 
       <div id="Sea" class="tabcontent">
-      <h3>Sea Levels</h3>
+      <h2>Sea Levels</h2>
       <p>
         Sea levels are significantly increasing due to ice glaciers and ice sheets that are on land and ocean, they are melting because of global warming.Ocean temperatures are increasing which is leading to ocean expansion.This water mostly comes from land ice. It’s a  pretty simple logic if water gets heated up then it obviously spreads. Same thing goes for the arctic ice when the ice gets heated up, it melts and runs through to the ocean and because the ice is melting fast therefore there is a lot of ice turning to water which is making the water rise because it has nowhere else to go. We know this because there has been a rise of 3 millimeters per year. This is important because it will affect coastal communities which is 40% of the human population and it will destroy lots of property. 
     </p><p>	Observing the change of sea level and how it has risen throughout the years, it has been because of the ice glaciers and the ice sheets, but they have occurred not only because of global temperature but also with the importance of the vertical motion that is assessing the sea level. The seasonal, year-to-year and decadal in regional climate all intervene with the long term signal that the sea level rises and as seen, will continue to rise if there is no change that we humans aren’t able to provide. According to NASA Earth Observatory, global sea levels have already risen 8 inches since 1880. Not only are the sea levels rising but also the rate in which they are increasing. At one point the earth has reached its highest  sea level so far, this is also is occurring because the carbon dioxide it increasing rapidly, provoking to the sea level to rise. We are not realizing that the sea level is already affecting big coastal cities and soon will travel east. It has been estimated that sea levels could rise another 1.3 meters in the next 80 years as stated NASA. Additionally, up to 216 million people are currently living in cities that are under sea level or will caused by a lot of flooding such as Inland. Due to sea level rise, even the water we are drinking today is being contaminated and irrigated.Many coastal areas rely on aquifers for drinking water but the sea salt water is reaching these aquifers that can be unsafe for humans as well as crops. It is very vital to understand that sea level rise does not only affect humans, but also threatens the coastal plants and animal life. It can be harmful and endanger that can affect the way they hatch their babies. 
@@ -117,23 +143,48 @@
       </div>
 
       <div id="Solutions" class="tabcontent">
-      <h3>What you can do!</h3>
+      <h2>What you can do!</h2>
       <p>Although we are causing a lot of damage we can still try to make things right. It is never too late to do the right thing.</p>
       <ol>
         <li>
           Firstly you can start by speaking up! Let everyone you know of know what is going on with our environment and how they can help. 
           <div class="speak">
-          <img src="https://vectortoons.com/wp-content/uploads/2016/04/women-public-speaking-collection-004-239x400.jpg">
+          <img src="https://vectortoons.com/wp-content/uploads/2016/04/women-public-speaking-collection-004-239x400.jpg" alt="speaking woman" align="middle">
           </div>
         </li>
-        <li></li>
+        <li>  
+          Vehichles are the second largest contributor of the greenhouse gases due to the large amounts of fossil fuels they emit. We can have different means of transportation by walking, biking, carpooling, or taking public transportation which'll be better for our planet. 
+        </li>
+        <li>
+           Avoid cutting down trees since they intake carbon dioxide and release the oxygen we need.
+        </li>
+        <li>
+          Reduce energy use by unplugging cables that aren't being used. 
+        </li>
+        <li>
+          Recycle, Reuse, & Reduce!
+        </li>
+        <li>
+        Reduce water waste
+        </li>
+      <li>
+        Flying during the day would be a good change, flights at night have a bigger impact on the climate.
+      </li>
+      <li>
+        Plant native plants in your area.
+
+      </li>
       </ol>
       </div>
 
       <div id="About" class="tabcontent">
-      <h3>About/Feedback</h3>
+      <h2>About</h2>
       <p>Our team decided to make this website to inform people of the climate change happening around us.klgjgkgr,fmiejgfjdbjbkdngkrjkghdrkthgkrhgkngkjntkrtgnkngkrtgtrgktrnlkndfvnlrnglktjrlkjgklrnbkgfnvldkkvdf,gkrtnhbgfnbgfnb,gfbnmfgnbd,bgghnfgd,b gfkdkb  g</p>
-      <div class="container">
+        </div>
+        <div id="Feedback" class="tabcontent">
+        <h2>Feedback</h2>
+        <p></p>
+        <div class="container">
         <form 
         action="redirectPage.html"
         method="POST"
@@ -156,7 +207,28 @@
       </div>
       </div>
       <div id="credits" class="tabcontent">
-        <h3>Credits</h3>
+        <h2>Citations</h2>
+        <ol>
+          <li>Denchak, M. (2017, July 17). <i>How You Can Stop Global Warming</i>. Retrieved from:<a href="https://www.nrdc.org/stories/how-you-can-stop-global-warming"> https://www.nrdc.org/stories/how-you-can-stop-global-warming</a></li>
+          <li>Union of Concerned Scientists <i>Land Ice</i>. Retrieved from:<a href="http://www.climatehotmap.org/global-warming-effects/land-ice.html">http://www.climatehotmap.org/global-warming-effects/land-ice.html</a></li>
+          <li>Weather Underground. <i>Arctic Sea Ice Decline</i>. Retrieved from:<a href="https://www.wunderground.com/climate/SeaIce.asp?MR=1"> https://www.wunderground.com/climate/SeaIce.asp?MR=1</a></li>
+          <li>Appell, D. (2014, Nov 14). <i>Loss of Land Ice (Not Sea Ice) = More Sea Level Rise</i>. Retrieved from: <a href="https://www.yaleclimateconnections.org/2014/11/loss-of-land-ice-not-sea-ice-more-sea-level-rise/">https://www.yaleclimateconnections.org/2014/11/loss-of-land-ice-not-sea-ice-more-sea-level-rise/</a></li>
+          <li>GREENPEACE. <i>Solutions to climate change</i>. Retrieved from:<a href="http://www.greenpeace.org/international/en/campaigns/climate-change/Solutions/"> http://www.greenpeace.org/international/en/campaigns/climate-change/Solutions/</a></li>
+          <li>NASA (2015, Aug 26). <i>Warming Seas and Melting Ice Sheets</i>. Retrieved from: <a href="https://www.nasa.gov/feature/goddard/warming-seas-and-melting-ice-sheets">https://www.nasa.gov/feature/goddard/warming-seas-and-melting-ice-sheets</a></li>
+          <li><i>Top 10 Things You Can Do to Reduce Climate Change</i>. Retrieved from: <a href="http://www.broward.org/Environment/AirQuality/EducationalPrograms/Pages/ThingsToPreventClimateChange.aspx">http://www.broward.org/Environment/AirQuality/EducationalPrograms/Pages/ThingsToPreventClimateChange.aspx</a></li>
+          <li>
+NOAA National Centers for Environmental information, Climate at a Glance: U.S. Time Series, published July 2017, retrieved on August 1, 2017 from <a href="http://www.ncdc.noaa.gov/cag/">http://www.ncdc.noaa.gov/cag/</a></li>
+          <li>NSIDC. <i>Facts about glaciers</i>. Retrieved from: <a href ="https://nsidc.org/cryosphere/glaciers/quickfacts.html">https://nsidc.org/cryosphere/glaciers/quickfacts.html</a></li>
+          <li>CARBON BRIEF STAFF (2013, March 3). <i>Five reasons why the speed of Arctic sea ice loss matters</i>. Retrieved from: <a href="https://www.carbonbrief.org/five-reasons-why-the-speed-of-arctic-sea-ice-loss-matters">https://www.carbonbrief.org/five-reasons-why-the-speed-of-arctic-sea-ice-loss-matters</a></li>
+          <li>Polar Discovery. <i>Compare the Poles: Weather</i>. Retrieved from: <a href="http://polardiscovery.whoi.edu/poles/weather.html">http://polardiscovery.whoi.edu/poles/weather.html</a>
+</li>
+          <li>NSIDC(2017, July 18). <i>A recent slowdown</i>. Retrieved from:<a href="http://nsidc.org/arcticseaicenews/">http://nsidc.org/arcticseaicenews/</a></li>
+          <li>Mclendon, R. (2016, Feb 26). <i>11 alarming facts about sea-level rise</i>. Retrieved from: <a href="https://www.mnn.com/earth-matters/climate-weather/blogs/facts-about-sea-level-rise">https://www.mnn.com/earth-matters/climate-weather/blogs/facts-about-sea-level-rise</a></li>
+          <li>NASA Earth Data. <i>Reconstructed Sea Level Version 1</i>. Retrieved from:<a href="https://sealevel.nasa.gov/data/dataset/?identifier=SLCP_RECON_SEA_LEVEL_OST_L4_V1_1"> https://sealevel.nasa.gov/data/dataset/?identifier=SLCP_RECON_SEA_LEVEL_OST_L4_V1_1</a></li>
+          <li>NASA Climate Change. <i>A blanket around the Earth/i>. Retrieved from: <a href="https://climate.nasa.gov/causes/">https://climate.nasa.gov/causes/</a></li>
+          <li>Landau, E. (2014, May 6). <i>5 things you can do about climate change</i>. Retrieved from: <a href="http://www.cnn.com/2014/05/06/us/climate-change-strategies/index.html">http://www.cnn.com/2014/05/06/us/climate-change-strategies/index.html</a></li>
+
+        </ol>
       </div>
 </div>
 <script>

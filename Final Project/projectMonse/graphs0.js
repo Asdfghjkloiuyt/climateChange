@@ -35,7 +35,7 @@ Plotly.d3.csv('projectMonse/outFile_beijing_weather2.csv', function(rows){
         tickformat: "%B, %Y"              // customize the date format to "month, day"
       },
       margin: {                           // update the left, bottom, right, top margin
-        l: 40, b: 10, r: 10, t: 20
+        l: 40, b: 20, r: 20, t: 20
       }
     };
 
