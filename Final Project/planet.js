@@ -1,79 +1,89 @@
+
 (function() {
-  var globe = planetaryjs.planet();
-  // Load our custom `autorotate` plugin; see below.
-  globe.loadPlugin(autorotate(10));
-  // The `earth` plugin draws the oceans and the land; it's actually
-  // a combination of several separate built-in plugins.
-  //
-  // Note that we're loading a special TopoJSON file
-  // (world-110m-withlakes.json) so we can render lakes.
-  globe.loadPlugin(planetaryjs.plugins.earth({
-    topojson: { file:   'world-110m-withlakes.json' },
-    oceans:   { fill:   '#000080' },
-    land:     { fill:   '#339966' },
-    borders:  { stroke: '#008000' }
-  }));
-  // Load our custom `lakes` plugin to draw lakes; see below.
-  globe.loadPlugin(lakes({
-    fill: '#000080'
-  }));
-  // The `pings` plugin draws animated pings on the globe.
-  globe.loadPlugin(planetaryjs.plugins.pings());
-  // The `zoom` and `drag` plugins enable
-  // manipulating the globe with the mouse.
-  globe.loadPlugin(planetaryjs.plugins.zoom({
-    scaleExtent: [100, 300]
-  }));
-  globe.loadPlugin(planetaryjs.plugins.drag({
-    // Dragging the globe should pause the
-    // automatic rotation until we release the mouse.
-    onDragStart: function() {
-      this.plugins.autorotate.pause();
-    },
-    onDragEnd: function() {
-      this.plugins.autorotate.resume();
-    }
-  }));
-  // Set up the globe's initial scale, offset, and rotation.
-  globe.projection.scale(175).translate([175, 175]).rotate([0, -10, 0]);
+   drawGlobe=function(csvFile, id){
+        var globe = planetaryjs.planet();
 
-  // Every few hundred milliseconds, we'll draw another random ping.
- // var colors = ['red', 'yellow', 'white', 'orange', 'green', 'cyan', 'pink'];
- d3.csv('globalData-1850-01-16.csv', function(rows){
-    console.log(rows);
-    var lats = Object.keys(rows);
-    for(latInd = 0; latInd < lats.length-1; latInd++) {
-      console.log(lats.length);
-        var lat = rows[latInd][""];
-        var lngs = Object.keys(rows[latInd]);
-        for (lngInd = 1; lngInd < lngs.length; lngInd++) {
-            var lng = lngs[lngInd];
-            var val = rows[latInd][lng];
-            var color;
-            if (val != "NA") {
-                if(val > 0){
-                    color = 'red';
-                }
-                else {
-                    color = '#90FFFF';
-                }
-                globe.plugins.pings.add(parseInt(lng), parseInt(lat), { color: color, ttl: 20000000, angle: 8}); 
-            }
-    } 
-    }
-});
+        // Load our custom `autorotate` plugin; see below.
+        globe.loadPlugin(autorotate(10));
+        // The `earth` plugin draws the oceans and the land; it's actually
+        // a combination of several separate built-in plugins.
+        //
+        // Note that we're loading a special TopoJSON file
+        // (world-110m-withlakes.json) so we can render lakes.
+        globe.loadPlugin(planetaryjs.plugins.earth({
+          topojson: { file:   'world-110m-withlakes.json' },
+          oceans:   { fill:   '#000080' },
+          land:     { fill:   '#339966' },
+          borders:  { stroke: '#008000' }
+        }));
+        // Load our custom `lakes` plugin to draw lakes; see below.
+        globe.loadPlugin(lakes({
+          fill: '#000080'
+        }));
+        // The `pings` plugin draws animated pings on the globe.
+        globe.loadPlugin(planetaryjs.plugins.pings());
+        // The `zoom` and `drag` plugins enable
+        // manipulating the globe with the mouse.
+        globe.loadPlugin(planetaryjs.plugins.zoom({
+          scaleExtent: [100, 300]
+        }));
+        globe.loadPlugin(planetaryjs.plugins.drag({
+          // Dragging the globe should pause the
+          // automatic rotation until we release the mouse.
+          onDragStart: function() {
+            this.plugins.autorotate.pause();
+          },
+          onDragEnd: function() {
+            this.plugins.autorotate.resume();
+          }
+        }));
+        // Set up the globe's initial scale, offset, and rotation.
+        globe.projection.scale(175).translate([175, 175]).rotate([0, -10, 0]);
 
-  var canvas = document.getElementById('rotatingGlobe');
-  // Special code to handle high-density displays (e.g. retina, some phones)
-  // In the future, Planetary.js will handle this by itself (or via a plugin).
-  if (window.devicePixelRatio == 2) {
-    canvas.width = 800;
-    canvas.height = 800;
-    context = canvas.getContext('2d');
-    context.scale(2, 2);
-  }
-  // Draw that globe!
-  globe.draw(canvas);
+        // Every few hundred milliseconds, we'll draw another random ping.
+      // var colors = ['red', 'yellow', 'white', 'orange', 'green', 'cyan', 'pink'];
+      
+        console.log(csvFile);
+        d3.csv(csvFile, function(rows){
+          console.log(rows);
+          var lats = Object.keys(rows);
+          for(latInd = 0; latInd < lats.length-1; latInd++) {
+            console.log(lats.length);
+              var lat = rows[latInd][""];
+              var lngs = Object.keys(rows[latInd]);
+              for (lngInd = 1; lngInd < lngs.length; lngInd++) {
+                  var lng = lngs[lngInd];
+                  var val = rows[latInd][lng];
+                  var color;
+                  if (val != "NA") {
+                      if(val > 0){
+                          color = 'red';
+                      }
+                      else {
+                          color = '#90FFFF';
+                      }
+                      globe.plugins.pings.add(parseInt(lng), parseInt(lat), { color: color, ttl: 20000000, angle: 20}); 
+                  }
+          } 
+          }
+        });
+
+          var canvas = document.getElementById(id);
+          // Special code to handle high-density displays (e.g. retina, some phones)
+          // In the future, Planetary.js will handle this by itself (or via a plugin).
+
+          if (window.devicePixelRatio == 2) {
+            canvas.width = 800;
+            canvas.height = 800;
+            context = canvas.getContext('2d');
+            context.scale(2, 2);
+          }
+          // Draw that globe!
+      context.clearRect(0, 0, canvas.width, canvas.height);
+         globe.draw(canvas);
+
+   }
+
 
   // This plugin will automatically rotate the globe around its vertical
   // axis a configured number of degrees every second.

@@ -19,16 +19,15 @@ function openCity(evt, cityName) {
 }
 
 
-function openTime(tme, globe) {
+function openTime(tme, globe, csvFile, id) {
     // Declare all variables
     var t, timec, timelink;
-
+    drawGlobe(csvFile, id)
     // Get all elements with class="timec" and hide them
     timec = document.getElementsByClassName("timec");
     for (t = 0; t < timec.length; t++) {
         timec[t].style.display = "none";
 
-   
     }
 
     // Get all elements with class="timelink" and remove the class "active"
@@ -57,11 +56,11 @@ function openTime(id){
 }
 */
 
-function initialize() {
+/*function initialize() {
                 var earth = new WE.map('earth_div');
                 WE.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
                   attribution: '© OpenStreetMap contributors'
                 }).addTo(earth);
-              }
+              }*/
 
 

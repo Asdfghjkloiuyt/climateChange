@@ -19,6 +19,7 @@
   <script type='text/javascript' src='http://d3js.org/topojson.v1.min.js'></script>
   <script type='text/javascript' src='planetaryjs.min.js'></script>
   <script type='text/javascript'src="https://d3js.org/d3.v3.min.js"></script>
+    <script type='text/javascript' src='planet.js'></script>
   <title>Climate Change</title>
   <link rel="icon" href="http://www.clker.com/cliparts/b/a/P/3/L/8/earth-cartoon-hi.pngg">
 </head>
@@ -52,53 +53,115 @@
 
         <div id="Home" class="tabcontent">
           <div class= "timeline">
-            <button class="timelink" onclick="openTime(event, 'eighty')"id="defOpen">1850</button>
-            <button class="timelink" onclick="openTime(event, 'hun')">1900</button>
-            <button class="timelink" onclick="openTime(event, 'twenties')">1920</button>
-            <button class="timelink" onclick="openTime(event, 'fourties')">1940</button>
-            <button class="timelink" onclick="openTime(event, 'sixties')">1960</button>
-            <button class="timelink" onclick="openTime(event, 'eighties')">1980</button>
-            <button class="timelink" onclick="openTime(event, 'thousands')">2000</button>
-            <button class="timelink" onclick="openTime(event, 'tens')">2010</button>
-            <button class="timelink" onclick="openTime(event, 'sixteen')">2016</button>
+            <button class="timelink" onclick="openTime(event, 'time', 'globalData-1850-01-16.csv', 'rotatingGlobe')"id="defOpen">1850</button>
+            <button class="timelink" onclick="openTime(event, 'time', '1874.csv', 'rotatingGlobe')">1874</button>
+            <button class="timelink" onclick="openTime(event, 'time', '1891.csv', 'rotatingGlobe')">1891</button>
+            <button class="timelink" onclick="openTime(event, 'time', '1916.csv', 'rotatingGlobe')">1916</button>
+            <button class="timelink" onclick="openTime(event, 'time', '1933.csv', 'rotatingGlobe')">1933</button>
+            <button class="timelink" onclick="openTime(event, 'time', '1950.csv', 'rotatingGlobe')">1950</button>
+            <button class="timelink" onclick="openTime(event, 'time', '1975.csv', 'rotatingGlobe')">1975</button>
+            <button class="timelink" onclick="openTime(event, 'time', '1991.csv', 'rotatingGlobe')">1991</button>
+            <button class="timelink" onclick="openTime(event, 'time', '2000.csv', 'rotatingGlobe')">2000</button>
+            <button class="timelink" onclick="openTime(event, 'time', '2008.csv', 'rotatingGlobe')">2008</button>
+            <button class="timelink" onclick="openTime(event, 'time', '2016.csv', 'rotatingGlobe')">2016</button>
             <button class="timelink" id="graph" onclick="openTime(event, 'svnteen')" >17' Graph</button>
 
           </div>
           
-            <div id="eighty" class="timec"> 
+            <div id="time" class="timec"> 
            <div class="key">
+
              <p style= "color:white; font-size: 20px; margin-top: 3px;"><u>Key</u></p>
               <p style="color:red; font-size: 18px; line-height: 5px;">Increase in Temp</p>
               <p style="color: #90FFFF;font-size: 18px; line-height: 5px">Decrease in Temp</p> </div>
                <canvas id='rotatingGlobe' width='550' height='550'
   style='width: 550px; height: 550px; cursor: move;'></canvas>
             </div>
-            <div id="hun" class="timec">
-              <p>hjjhbnvgfc</p>
+  <!--          <div id="eighteenSeventyfour" class="timec">
+               <div class="key">
+             <p style= "color:white; font-size: 20px; margin-top: 3px;"><u>Key</u></p>
+              <p style="color:red; font-size: 18px; line-height: 5px;">Increase in Temp</p>
+              <p style="color: #90FFFF;font-size: 18px; line-height: 5px">Decrease in Temp</p> </div>
+               <canvas id='svn' width='550' height='550'
+  style='width: 550px; height: 550px; cursor: move;'></canvas>
             </div>
-            <div id="twenties" class="timec">
-              <p>fwefa</p>
+            <div id="eighteenNinetyone" class="timec">
+             <div class="key">
+             <p style= "color:white; font-size: 20px; margin-top: 3px;"><u>Key</u></p>
+              <p style="color:red; font-size: 18px; line-height: 5px;">Increase in Temp</p>
+              <p style="color: #90FFFF;font-size: 18px; line-height: 5px">Decrease in Temp</p> </div>
+               <canvas id='eno' width='550' height='550'
+  style='width: 550px; height: 550px; cursor: move;'></canvas>
             </div>
-            <div id="fourties" class="timec">
-              Not  Done.
+            
+            <div id="nineteenSixteen" class="timec">
+              <div class="key">
+             <p style= "color:white; font-size: 20px; margin-top: 3px;"><u>Key</u></p>
+              <p style="color:red; font-size: 18px; line-height: 5px;">Increase in Temp</p>
+              <p style="color: #90FFFF;font-size: 18px; line-height: 5px">Decrease in Temp</p> </div>
+               <canvas id='ns' width='550' height='550'
+  style='width: 550px; height: 550px; cursor: move;'></canvas>
             </div>
-            <div id="sixties" class="timec">  
-               Not  Done.
+            
+            <div id="nineteenThirtythree" class="timec">
+               <div class="key">
+             <p style= "color:white; font-size: 20px; margin-top: 3px;"><u>Key</u></p>
+              <p style="color:red; font-size: 18px; line-height: 5px;">Increase in Temp</p>
+              <p style="color: #90FFFF;font-size: 18px; line-height: 5px">Decrease in Temp</p> </div>
+               <canvas id='tt' width='550' height='550'
+  style='width: 550px; height: 550px; cursor: move;'></canvas>
             </div>
-            <div id="eighties" class="timec">
-                            Not  Done.
+            <div id="nineteenFifty" class="timec">  
+                <div class="key">
+             <p style= "color:white; font-size: 20px; margin-top: 3px;"><u>Key</u></p>
+              <p style="color:red; font-size: 18px; line-height: 5px;">Increase in Temp</p>
+              <p style="color: #90FFFF;font-size: 18px; line-height: 5px">Decrease in Temp</p> </div>
+               <canvas id='fifty' width='550' height='550'
+  style='width: 550px; height: 550px; cursor: move;'></canvas>
+            </div>
+            <div id="nineteenSeventyfive" class="timec">
+                             <div class="key">
+             <p style= "color:white; font-size: 20px; margin-top: 3px;"><u>Key</u></p>
+              <p style="color:red; font-size: 18px; line-height: 5px;">Increase in Temp</p>
+              <p style="color: #90FFFF;font-size: 18px; line-height: 5px">Decrease in Temp</p> </div>
+               <canvas id='seventyFive' width='550' height='550'
+  style='width: 550px; height: 550px; cursor: move;'></canvas>
 
             </div>
-            <div id="thousands" class="timec">
-                            Not  Done.
+            <div id="nineteenNinetyone" class="timec">
+                             <div class="key">
+             <p style= "color:white; font-size: 20px; margin-top: 3px;"><u>Key</u></p>
+              <p style="color:red; font-size: 18px; line-height: 5px;">Increase in Temp</p>
+              <p style="color: #90FFFF;font-size: 18px; line-height: 5px">Decrease in Temp</p> </div>
+               <canvas id='nineNinetyOne' width='550' height='550'
+  style='width: 550px; height: 550px; cursor: move;'></canvas>
 
             </div>
-            <div id="tens" class="timec">
-                            Not  Done.
+            <div id="two" class="timec">
+                             <div class="key">
+             <p style= "color:white; font-size: 20px; margin-top: 3px;"><u>Key</u></p>
+              <p style="color:red; font-size: 18px; line-height: 5px;">Increase in Temp</p>
+              <p style="color: #90FFFF;font-size: 18px; line-height: 5px">Decrease in Temp</p> </div>
+               <canvas id='twot' width='550' height='550'
+  style='width: 550px; height: 550px; cursor: move;'></canvas>
+            </div>
+
+            <div id="twoeight" class="timec">
+                             <div class="key">
+             <p style= "color:white; font-size: 20px; margin-top: 3px;"><u>Key</u></p>
+              <p style="color:red; font-size: 18px; line-height: 5px;">Increase in Temp</p>
+              <p style="color: #90FFFF;font-size: 18px; line-height: 5px">Decrease in Temp</p> </div>
+               <canvas id='twoTEight' width='550' height='550'
+  style='width: 550px; height: 550px; cursor: move;'></canvas>
 
             </div>
-            <div id="sixteen" class="timec">
-                            Not  Done.
+             <div id="twosxteen" class="timec">
+                             <div class="key">
+             <p style= "color:white; font-size: 20px; margin-top: 3px;"><u>Key</u></p>
+              <p style="color:red; font-size: 18px; line-height: 5px;">Increase in Temp</p>
+              <p style="color: #90FFFF;font-size: 18px; line-height: 5px">Decrease in Temp</p> </div>
+               <canvas id='twoSixteen' width='550' height='550'
+  style='width: 550px; height: 550px; cursor: move;'></canvas>-->
 
             </div>
             <div id="svnteen" class="timec">
@@ -239,5 +302,15 @@ document.getElementById("defaultOpen").click();
 document.getElementById("defOpen").click();
 </script>
 </body>
-  <script type='text/javascript' src='planet.js'></script>
+  <!--<script type='text/javascript' src='planet.js'></script>-->
+ <!--<script type='text/javascript' src='planett.js'></script>
+  <script type='text/javascript' src='ninetyone.js'></script>
+  <script type='text/javascript' src='sixteen.js'></script>
+  <script type='text/javascript' src='thirtythree.js'></script>
+  <script type='text/javascript' src='fifty.js'></script>
+  <script type='text/javascript' src='seventyFive.js'></script>
+  <script type='text/javascript' src='nineNinetyOne.js'></script>
+  <script type='text/javascript' src='two.js'></script>
+  <script type='text/javascript' src='twoEight.js'></script>
+  <script type='text/javascript' src='twoSixteen.js'></script>-->
 </html>

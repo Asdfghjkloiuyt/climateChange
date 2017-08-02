@@ -196,6 +196,7 @@ div.timeline button.active{
 
     height: 90%;
     width: 97%;
+    border-radius: 10px;
 }
 #svnteen.timec{
     background: white
