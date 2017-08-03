@@ -22,16 +22,20 @@ li{
     text-align: left;
    font-size: 15px;
     font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
-        line-height: 30px;
+     line-height: 30px;
 
 }
 /*...........................................Headers..........................................*/
-h1{
-  text-align:center;
+.header{
   color:white;
   background-color: rgba(0, 0, 0, 0.7);
-  font-size: 25px;
-  height: 30px;
+    padding: 1px 5px 0.5px 10px;
+}
+#subtitle{
+    color:#5AACF5;
+    font-size: 18px;
+        padding: 1px 5px 0.5px 80px;
+
 }
 #titles{
     background-color: rgba(255, 255, 255, 0.5 );
