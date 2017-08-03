@@ -86,7 +86,7 @@ div.tab {
     border: 1px solid #ccc;
     border-left:none;
     background-color: #f1f1f1;
-    width: 10%;
+    width: 11%;
     height: 100%;
     margin-top: 0;
     margin-bottom: 0;
@@ -151,7 +151,7 @@ div.tab button.active {
 #wordBg{
     background-color: rgba(204,204,204,0.75 );
     background-size: cover;
-    font-size: 100%;
+    font-size: 15.5px;
     color: black;
 }
 #wordBg.active{
@@ -297,10 +297,13 @@ div.timeline button.active{
 }
 /*---------------------------------------------Graphs----------------------------------------------*/
 #TEMP{
-    display : inline;
+    float:left;
     position:relative;
     left:50px;
     overflow: hidden;
+}
+#co2Data{
+    float:left;
 }
 #landIce{
     text-align: center;
@@ -339,6 +342,7 @@ height:100%;
   text-align: center;
   border-radius: 15px;
 }*/
+
 input[type=text], select, textarea {
     width: 100%; /* Full width */
     padding: 12px; /* Some padding */
