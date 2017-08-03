@@ -42,7 +42,7 @@
 
         // Every few hundred milliseconds, we'll draw another random ping.
       // var colors = ['red', 'yellow', 'white', 'orange', 'green', 'cyan', 'pink'];
-      
+
         console.log(csvFile);
         d3.csv(csvFile, function(rows){
           console.log(rows);
@@ -62,22 +62,19 @@
                       else {
                           color = '#90FFFF';
                       }
-                      globe.plugins.pings.add(parseInt(lng), parseInt(lat), { color: color, ttl: 20000000, angle: 20}); 
+                      globe.plugins.pings.add(parseInt(lng), parseInt(lat), { color: color, ttl: 20000000, angle: 20});
                   }
-          } 
+          }
           }
         });
 
           var canvas = document.getElementById(id);
           // Special code to handle high-density displays (e.g. retina, some phones)
           // In the future, Planetary.js will handle this by itself (or via a plugin).
+          var context;
+          context = canvas.getContext('2d');
+          context.scale(2, 2);
 
-          if (window.devicePixelRatio == 2) {
-            canvas.width = 800;
-            canvas.height = 800;
-            context = canvas.getContext('2d');
-            context.scale(2, 2);
-          }
           // Draw that globe!
       context.clearRect(0, 0, canvas.width, canvas.height);
          globe.draw(canvas);
