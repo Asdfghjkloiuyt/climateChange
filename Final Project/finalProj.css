@@ -22,6 +22,7 @@ li{
     text-align: left;
    font-size: 15px;
     font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+        line-height: 30px;
 
 }
 /*...........................................Headers..........................................*/
@@ -32,13 +33,47 @@ h1{
   font-size: 25px;
   height: 30px;
 }
-#land{
-    background:url("https://www.yaleclimateconnections.org/pics/cc/111414_NSIDCice_300.jpg") no-repeat center center fixed;
+#titles{
+    background-color: rgba(255, 255, 255, 0.5 );
+}
+h2{
     -webkit-background-size:cover;
     -moz-background-size:cover;
     -o-background-size:cover;
     background-size: cover;
     padding: 20px 5px 15px 20px;
+    color:black;
+}
+#land{
+    background:url("https://www.corbettreport.com/wp-content/uploads/2015/11/sea-ice-expanding-in-antarctica.jpg") no-repeat center center fixed;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size: cover;
+    padding: 20px 5px 15px 20px;
+}
+#arctic{
+        background:url("https://www.carbonbrief.org/wp-content/uploads/2015/03/stock-arctic-sea-ice-2.jpg") no-repeat center center fixed;
+}
+#sea{
+    background: url("http://jmarbach.com/images/bubbles.jpg") no-repeat center center fixed;
+}
+#help{
+    background: url("https://www.arborday.org/celebrate/images/tree-planting.jpg") no-repeat center center fixed;
+        -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size: cover;
+    padding: 20px 5px 15px 20px;
+}
+#causes{
+    background: url("http://i.dailymail.co.uk/i/pix/2016/12/29/01/3BB0243F00000578-4072114-China_has_vowed_to_shut_down_privately_owned_steel_coal_and_othe-a-8_1482974169616.jpg") no-repeat center center fixed;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size: cover;
+    padding: 20px 5px 15px 20px;
+    color:black;
 }
 /*.......................Sidebar.........................*/
 div.tab {
@@ -156,16 +191,63 @@ div.tab button.active {
 #ttabBg.active{
     background: #ccc;
 }
-#tttagBg{
-    background-image: url("http://dujs.dartmouth.edu/wp-content/uploads/13_74_25_web.jpg");
+#tttabBg{
+    background-image: url("http://onlineapps.tsiic.telangana.gov.in:8888/TsiicWeb/images/powerplant.jpg");
     background-size:cover;
     color:white;
 }
 #tttabBg:hover{
-    background-image: url("http://dingo.care2.com/pictures/causes/3203/3202416.large.jpg");
+    background-image: url("http://az616578.vo.msecnd.net/files/2016/04/28/635974807048610294-1798008217_factory-532_1446890a.jpg");
 }
 #tttabBg.active{
     background: #ccc;
+}
+#defaultOpen{
+    background-image: url("http://assets.worldwildlife.org/photos/13148/images/hero_full/17_292_Earth_Hour_Web_Images_1600x600_v4.jpg?1487079364");
+    background-size:cover;
+    color:white;
+}
+#defaultOpen:hover{
+    background-image: url("http://i.huffpost.com/gen/5065844/images/o-SATELLITE-SPACE-facebook.jpg");
+}
+#defaultOpen.active{
+    background: #ccc;
+}
+#feed{
+    background-image: url("http://cf.ltkcdn.net/garden/images/slide/112065-850x565-Gray-Clay-Soil.jpg"); 
+    background-size:cover;
+    color:white;
+}
+#feed:hover{
+    background-image: url("https://cdn1.pri.org/sites/default/files/styles/story_main/public/Sunflowers.jpg?itok=N-NIcRjQ")
+}
+#feed.active{
+    background: #ccc;
+}
+#bout{
+    background-image: url("https://keddr.com/wp-content/uploads/2014/12/zeitgeist-2014-7.jpg");
+    background-size:cover;
+    color:white;
+}
+#bout:hover{
+    background-image: url("https://lh6.googleusercontent.com/-f8L9SUZaUnY/UT1iG23ZrAI/AAAAAAAAAUE/xen5UxPO-CI/s640/blogger-image-1153110592.jpg");
+}
+#bout.active{
+        background: #ccc;
+}
+#cred{
+    background-image: url("https://www.thesun.co.uk/wp-content/uploads/2016/11/nintchdbpict000203940397.jpg?strip=all&w=960");
+        background-size:cover;
+    color:white;
+}
+#cred:hover{
+    background-image: url("https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/files/75607/area14mp/image-20150323-14609-1x0mv4q.jpg")
+}
+#cred.active{
+    background: #ccc;
+}
+/*.tablinks{
+    border: 1px solid #ccc;
 }
 /*............................Home Content............................*/
 #Home{
@@ -270,7 +352,7 @@ input[type=text], select, textarea {
 
 /* Style the submit button with a specific background color etc */
 input[type=submit] {
-    background-color: #604975;
+    background-color: #447C40;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -280,7 +362,7 @@ input[type=submit] {
 
 /* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
-    background-color: #663366;
+    background-color: #266921;
 }
 
 /* Add a background color and some padding around the form */

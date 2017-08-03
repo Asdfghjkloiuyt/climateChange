@@ -31,9 +31,11 @@
 
 <div class="content">
       <div class="tab">
-      <button class="tablinks" onclick="openCity(event, 'Home')" id="defaultOpen">Home</button>
-      <button id="tttabBg"class="tablinks" onclick="openCity(event, 'carbon')">
-        <div id="">Causes</div>
+      <button class="tablinks" onclick="openCity(event, 'Home')" id="defaultOpen">
+       <div id="wordBg"> Home</div>
+      </button>
+      <button id="tttabBg" class="tablinks" onclick="openCity(event, 'carbon')">
+        <div id="wordBg">Causes</div>
         </button>
       <button id= "tabBg" class="tablinks" onclick="openCity(event, 'Arctic')">
         <div id="wordBg">Arctic Ice</div>
@@ -45,10 +47,17 @@
         <div id="wordBg">Sea Level</div>
       </button>
       <button id="ttabBg"class="tablinks" onclick="openCity(event, 'Solutions')">
-       <div id="wordBg">What you can do</div></button>
-             <button class="tablinks" onclick="openCity(event, 'Feedback')">Feedback</button>
-      <button class="tablinks" onclick="openCity(event, 'About')">About</button>
-      <button class="tablinks" onclick="openCity(event, 'credits')">Credits</button>
+       <div id="wordBg">What you can do</div>
+      </button>
+      <button id="feed" class="tablinks" onclick="openCity(event, 'Feedback')">
+       <div id="wordBg"> Feedback</div>
+      </button>
+      <button id="bout" class="tablinks" onclick="openCity(event, 'About')">
+        <div id="wordBg">About</div>
+      </button>
+      <button id="cred"class="tablinks" onclick="openCity(event, 'credits')">
+       <dic id="wordBg"> Credits </div>
+      </button>
       </div>
 
         <div id="Home" class="tabcontent">
@@ -64,18 +73,16 @@
             <button class="timelink" onclick="openTime(event, 'time', '2000.csv', 'rotatingGlobe')">2000</button>
             <button class="timelink" onclick="openTime(event, 'time', '2008.csv', 'rotatingGlobe')">2008</button>
             <button class="timelink" onclick="openTime(event, 'time', '2016.csv', 'rotatingGlobe')">2016</button>
-            <button class="timelink" id="graph" onclick="openTime(event, 'svnteen')" >17' Graph</button>
 
           </div>
           
             <div id="time" class="timec"> 
            <div class="key">
-
              <p style= "color:white; font-size: 20px; margin-top: 3px; margin-left:0px; margin-right:0px;
              "><u>Key</u></p>
-              <p style="color:red; font-size: 18px; line-height: 5px;  margin:none;
+              <p style="color:red; font-size: 18px; line-height: 5px;   margin-left:0px; margin-right:0px;
               ">Increase in Temp</p>
-              <p style="color: #90FFFF;font-size: 18px; line-height: 5px">Decrease in Temp</p> </div>
+              <p style="color: #90FFFF;font-size: 18px; line-height: 5px;  margin-left:0px; margin-right:0px;">Decrease in Temp</p> </div>
                <canvas id='rotatingGlobe' width='550' height='550'
   style='width: 550px; height: 550px; cursor: move;'></canvas>
             </div>
@@ -166,20 +173,19 @@
   style='width: 550px; height: 550px; cursor: move;'></canvas>-->
 
             </div>
-            <div id="svnteen" class="timec">
-                      <div id=TEMP></div>
-            </div>
+            
         </div>
        
       <div id="carbon" class="tabcontent">
-        <h2>Causes of Climate Change</h2>
+        <h2 id="causes"><div id="titles">Causes of Climate Change</div></h2>
         <p>
 Climate change are mainly affected by human activities who are changing the greenhouse gases. The greenhouse gases are very important to the atmosphere. They are the ones that keep the warmth of the earth by trapping the heat, then absorbing it in a constant cycle. The greenhouse gases are made up of water vapor, methane, ozone, nitrous oxide, and carbon dioxide. Although, the greenhouse gases keep earth’s warm temperature, our atmosphere contains carbon dioxide, methane and other gases that prevent energy from exiting back into space that will result in the rise of temperature. The earth is made up of different gases, some that are abundant to the atmosphere such as nitrogen, oxygen, and argon. The greenhouse gases such as water vapor, carbon dioxide, and methane occupy a small percent in the atmosphere but yet play the most important role in the causes of global warming due to the fact that they trap the earth’s heat. Water vapor is the most abundant but as the temperature rises, so will the water causing sea level rise. Although, methane doesn’t take up that much in the atmosphere, it is the one that traps the energy. In the atmosphere, carbon dioxide is the less harmful and it is released in many different ways it doesn’t trap the heat as much as methane, but since it is a source that is used so much by humans it becomes harmful to humans, plants and the animals. Human activities such as excessive use of transportation which burns fossil fuels containing coal, oil. Cement production and deforestation are examples of human activities that endanger and cause climate change. </p>
       <div id=co2Data></div>
+     <div id=TEMP></div>
       </div>
 
       <div id="Arctic" class="tabcontent">
-      <h2>Arctic Ice</h2>
+      <h2 id="arctic"><div id="titles">Arctic Ice</div></h2>
       <p>
          The Arctic is an ocean consisting mostly of sea ice in the North pole and  holds a unique and diverse biome with species that are only able to survive there. It is a semi-enclosed ocean that is surrounded by unfrozen land. It’s annual temperature is -40 degrees fahrenheit during winter and during the summer it is 32 degrees fahrenheit which is significantly warm, increasing 5 degrees since 2000. The Arctic’s ice is melting two times faster than scientist had predicted and the primary reason for the speed the ice is melting at is global warming, as the air and sea temperatures increase the water is not cold enough for the ice to remain frozen or build up. Although it’s enclosed surroundings allow for the ice to bump into each other and pile up to become thicker. During the winter season when the sea temperature is cold enough to freeze water is getting short which will only result in smaller ice floes. The loss of ice in the arctic will have significant effects on the water temperature, climate, ocean currents and  a huge imbalance in the arctic's ecosystem.
       </p>
@@ -187,7 +193,7 @@ Climate change are mainly affected by human activities who are changing the gree
       </div>
 
       <div id="Land" class="tabcontent">
-      <h2 id="land">Land Ice</h2>
+      <h2 id="land"><div id="titles">Land Ice</div></h2>
       <p>
         The most significant contributor to the critical rise in sea level and a significant piece of evidence of climate change is the melting land ice. Land ice includes glaciers and ice sheets that cover areas such as Antarctica and Greenland. The exposure of land ice to heat results in it melting and due to the rise in temperature over the years, land ice has been melting at an alarming rate. According to NASA, the ice mass of Antarctica has been dropping at a rate of 125.0 ± 39 Gigatonnes per year and the ice mass of Greenland has been dropping at a rate of 287.0 Gigatonnes per year with a margin of ±21 since 2002. One gigatonne is equivalent to 2204622621848.8 lbs, so imagine how much ice is being lost per year! 
         Upon melting, the water from the ice travels rapidly to the sea, filling it up and causing a rise in the sea level. (To see the effects of the rise in sea level, click on the sea level tab.) The rise in  sea level and the massive loss of land ice demonstrates the dire effects of climate change. 
@@ -202,7 +208,7 @@ Climate change are mainly affected by human activities who are changing the gree
       </div>
 
       <div id="Sea" class="tabcontent">
-      <h2>Sea Levels</h2>
+      <h2 id="sea"><div id="titles">Sea Levels</div></h2>
             <div id=seaLevel></div>
 
       <p>
@@ -212,7 +218,7 @@ Climate change are mainly affected by human activities who are changing the gree
       </div>
 
       <div id="Solutions" class="tabcontent">
-      <h2>What you can do!</h2>
+      <h2 id="help"><div id="titles">What you can do!</div></h2>
       <p>Although we are causing a lot of damage we can still try to make things right. It is never too late to do the right thing.</p>
       <ol>
         <li>
@@ -247,12 +253,18 @@ Climate change are mainly affected by human activities who are changing the gree
       </div>
 
       <div id="About" class="tabcontent">
-      <h2>About</h2>
-      <p>Our team decided to make this website to inform people of the climate change happening around us.klgjgkgr,fmiejgfjdbjbkdngkrjkghdrkthgkrhgkngkjntkrtgnkngkrtgtrgktrnlkndfvnlrnglktjrlkjgklrnbkgfnvldkkvdf,gkrtnhbgfnbgfnb,gfbnmfgnbd,bgghnfgd,b gfkdkb  g</p>
-        </div>
-        <div id="Feedback" class="tabcontent">
-        <h2>Feedback</h2>
-        <p>Feel free to give us feedback about our page! We accept all types of feedback, whether it may be positive or negative -- we just want to provide users with the best experience possible!</p>
+        <h2 style="background: #668EB2;"><div id="titles">About</div></h2>
+        <p>Our team,  Monserath Flores, Katherine Gonzalez, Sally Lei, and Flor Hernandez, created this website using HTML, CSS, and Javascript. Our purpose for this site is to convince people that climate change is happening,  have them gain awareness about the ongoing issues involving climate change, encourage them to spread that awareness, and motivate them to adjust their habits in ways that’ll not only benefit the environment, but also humans in general.</p>
+        <h3 style="text-align:left"><u>Roles:</u></h3>
+        <ul>
+          <li style="font-size:15.5px">Sally Lei: Website(Design/Development), Globe</li>
+          <li style="font-size:15.5px">Flor Hernandez: Research</li>
+          <li style="font-size:15.5px">Monserath Flores and Katherine Gonzalez: Data Analysis and Visualization(Graphs)</li>
+        </ul>
+      </div>
+      <div id="Feedback" class="tabcontent">
+        <h2 style="background:#BDD7BB;"><div id="titles">Feedback</div></h2>
+        <p style="    text-indent: 0px;">Feel free to give us feedback about our page! We accept all types of feedback, whether it may be positive or negative -- we just want to provide users with the best experience possible!</p>
         <div class="container">
         <form 
         action="redirectPage.html"
@@ -275,8 +287,9 @@ Climate change are mainly affected by human activities who are changing the gree
         </form>
       </div>
       </div>
+      
       <div id="credits" class="tabcontent">
-        <h2>Citations</h2>
+        <h2 style="background: #C6A2F5;"><div id="titles">Citations</div></h2>
         <ol>
           <li>Denchak, M. (2017, July 17). <i>How You Can Stop Global Warming</i>. Retrieved from:<a href="https://www.nrdc.org/stories/how-you-can-stop-global-warming"> https://www.nrdc.org/stories/how-you-can-stop-global-warming</a></li>
           <li>Union of Concerned Scientists <i>Land Ice</i>. Retrieved from:<a href="http://www.climatehotmap.org/global-warming-effects/land-ice.html">http://www.climatehotmap.org/global-warming-effects/land-ice.html</a></li>
