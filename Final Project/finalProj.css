@@ -22,16 +22,20 @@ li{
     text-align: left;
    font-size: 15px;
     font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
-        line-height: 30px;
+     line-height: 30px;
 
 }
 /*...........................................Headers..........................................*/
-h1{
-  text-align:center;
+.header{
   color:white;
   background-color: rgba(0, 0, 0, 0.7);
-  font-size: 25px;
-  height: 30px;
+    padding: 1px 5px 0.5px 10px;
+}
+#subtitle{
+    color:#5AACF5;
+    font-size: 18px;
+        padding: 1px 5px 0.5px 80px;
+
 }
 #titles{
     background-color: rgba(255, 255, 255, 0.5 );
@@ -88,7 +92,7 @@ div.tab {
     background-color: #f1f1f1;
     width: 11%;
     height: 100%;
-    margin-top: 0;
+    margin-top: 3px;
     margin-bottom: 0;
     transition: 0.6s;
     border-radius: 0px 40px 40px 0px;
@@ -127,6 +131,7 @@ div.tab button.active {
     position: absolute;
     padding: 0px 12px;
     border: 1px solid #ccc;
+    margin-top:3px;
     border-left: none;
     border-right: none;
     z-index: 0;

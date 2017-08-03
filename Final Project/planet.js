@@ -63,8 +63,7 @@
                       else {
                           color = '#90FFFF';
                       }
-
-                     globe.plugins.pings.add(parseInt(lng), parseInt(lat), { color: color, ttl: 1000000, angle: 0.8}); 
+                     globe.plugins.pings.add(parseInt(lng), parseInt(lat), { color: color, ttl: 1000000, angle: 0.8});
                   }
           }
           }
@@ -79,10 +78,12 @@
           context = canvas.getContext('2d');
           context.scale(2, 2);
 
-          canvas.width = 800;
-          canvas.height = 800;
-          context = canvas.getContext('2d');
-          context.scale(2, 2);
+
+
+            canvas.width = 800;
+            canvas.height = 800;
+            context = canvas.getContext('2d');
+            context.scale(2, 2);
 
           // Draw that globe!
           context.beginPath();
