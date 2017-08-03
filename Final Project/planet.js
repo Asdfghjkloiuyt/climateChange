@@ -2,7 +2,6 @@
 (function() {
    drawGlobe=function(csvFile, id){
         var globe = planetaryjs.planet();
-
         // Load our custom `autorotate` plugin; see below.
         globe.loadPlugin(autorotate(10));
         // The `earth` plugin draws the oceans and the land; it's actually
@@ -42,13 +41,15 @@
 
         // Every few hundred milliseconds, we'll draw another random ping.
       // var colors = ['red', 'yellow', 'white', 'orange', 'green', 'cyan', 'pink'];
-      
+
         console.log(csvFile);
+        document.getElementById("time").style.display = "none";
         d3.csv(csvFile, function(rows){
-          console.log(rows);
+        document.getElementById("time").style.display = "block";
           var lats = Object.keys(rows);
+          globe.plugins.pings.remove();
           for(latInd = 0; latInd < lats.length-1; latInd++) {
-            console.log(lats.length);
+           // console.log(lats.length);
               var lat = rows[latInd][""];
               var lngs = Object.keys(rows[latInd]);
               for (lngInd = 1; lngInd < lngs.length; lngInd++) {
@@ -62,27 +63,31 @@
                       else {
                           color = '#90FFFF';
                       }
-                      globe.plugins.pings.add(parseInt(lng), parseInt(lat), { color: color, ttl: 20000000, angle: 20}); 
+                     globe.plugins.pings.add(parseInt(lng), parseInt(lat), { color: color, ttl: 200000, angle: 0.8}); 
                   }
           } 
           }
         });
 
           var canvas = document.getElementById(id);
+           canvas.innerHTML = "";
+           console.log("hi");
           // Special code to handle high-density displays (e.g. retina, some phones)
           // In the future, Planetary.js will handle this by itself (or via a plugin).
 
-          if (window.devicePixelRatio == 2) {
+          
             canvas.width = 800;
             canvas.height = 800;
             context = canvas.getContext('2d');
             context.scale(2, 2);
-          }
+          
           // Draw that globe!
-      context.clearRect(0, 0, canvas.width, canvas.height);
+          context.beginPath();
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        
          globe.draw(canvas);
 
-   }
+   
 
 
   // This plugin will automatically rotate the globe around its vertical
@@ -141,4 +146,5 @@
       });
     };
   };
+ }
 })();
