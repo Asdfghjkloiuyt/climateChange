@@ -63,7 +63,7 @@
                       else {
                           color = '#90FFFF';
                       }
-                     globe.plugins.pings.add(parseInt(lng), parseInt(lat), { color: color, ttl: 200000, angle: 0.8}); 
+                     globe.plugins.pings.add(parseInt(lng), parseInt(lat), { color: color, ttl: 1000000, angle: 0.8}); 
                   }
           } 
           }
