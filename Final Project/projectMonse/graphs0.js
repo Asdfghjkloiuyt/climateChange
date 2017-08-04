@@ -1,7 +1,6 @@
 
-Plotly.d3.csv('projectMonse/outFile_beijing_weather2.csv', function(rows){
-  console.log(window.location.pathname);  
-  var trace = {
+Plotly.d3.csv('../projectMonse/outFile_beijing_weather2.csv', function(rows){
+    var trace = {
       type: 'scatter',                    // set the chart type
       mode: 'lines',                      // connect points with lines
       x: rows.map(function(row){          // set the x-data
