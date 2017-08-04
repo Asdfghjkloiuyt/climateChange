@@ -27,13 +27,14 @@ Plotly.d3.csv('projectMonse/outFile_co2_annmean_gl.csv', function(rows){
     };
 
     var layout = {
+      title: 'Carbon Dioxide Data',
       yaxis: {title: "Average"},       // set the y axis title
       xaxis: {
         showgrid: false,                  // remove the x-axis grid lines
         tickformat: "%B, %Y"              // customize the date format to "month, day"
       },
       margin: {                           // update the left, bottom, right, top margin
-        l: 40, b: 10, r: 10, t: 20
+        l: 40, b: 60, r: 60, t: 40
       }
     };
 

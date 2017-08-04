@@ -1,12 +1,48 @@
 
 h1{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 50%;
-    height: 30%;
-    margin: auto;
+text-align: center;
 
+}
+
+#ty {
+  position:relative;
+  height:281px;
+  width:450px;
+  margin:0 auto;
+}
+#ty img {
+  position:absolute;
+  left:0;
+    height:281px;
+  width:450px;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+#ty img.transparent {
+opacity:0;
+}
+@keyframes tyFadeInOut {
+  0% {
+  opacity:1;
+}
+45% {
+opacity:1;
+}
+55% {
+opacity:0;
+}
+100% {
+opacity:0;
+}
+}
+
+#ty img.top {
+animation-name: tyFadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 4s;
+animation-direction: alternate;
 }

@@ -21,7 +21,7 @@ Plotly.d3.csv('projectMonse/landIce.csv', function(allRows){
         opacity: 0.6,
         line: {
           color: 'rbg(8,48,107)',
-          width: 1.5
+          width: 2
         }
       }
     };
@@ -30,7 +30,10 @@ Plotly.d3.csv('projectMonse/landIce.csv', function(allRows){
 
     var layout = {
       title: 'Land Ice',
-      yaxis: {title: "Geographic Area"}
+      yaxis: {title: "Geographic Area"},
+   margin: {                           // update the left, bottom, right, top margin
+        l: 40, b: 150, r: 70, t: 40
+      }
     };
 
     Plotly.newPlot('landIce', data, layout);

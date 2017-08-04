@@ -5,25 +5,81 @@ body{
     -moz-background-size:cover;
     -o-background-size:cover;
     background-size: cover;
-}
-h1{
-  text-align:center;
-  color:white;
-  background-color: rgba(0, 0, 0, 0.5);
-  font-size: 30px;
+    
 }
 p{
     text-indent: 40px;
     text-align:left;
-    font-size: 18px;
-    line-height: 20px;
+    font-size: 16px;
+    line-height: 30px;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    margin-left:15px;
+    margin-right:15px;
+
 }
 
-ul{
+li{
     text-align: left;
-   font-size: 18px;
+   font-size: 15px;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+     line-height: 30px;
+
 }
-/*........................Sidebar.........................*/
+/*...........................................Headers..........................................*/
+.header{
+  color:white;
+  background-color: rgba(0, 0, 0, 0.7);
+    padding: 1px 5px 0.5px 10px;
+}
+#subtitle{
+    color:#5AACF5;
+    font-size: 18px;
+        padding: 1px 5px 0.5px 80px;
+
+}
+#titles{
+    background-color: rgba(255, 255, 255, 0.5 );
+}
+h2{
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size: cover;
+    padding: 20px 5px 15px 20px;
+    color:black;
+}
+#land{
+    background:url("https://www.corbettreport.com/wp-content/uploads/2015/11/sea-ice-expanding-in-antarctica.jpg") no-repeat center center fixed;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size: cover;
+    padding: 20px 5px 15px 20px;
+}
+#arctic{
+        background:url("https://www.carbonbrief.org/wp-content/uploads/2015/03/stock-arctic-sea-ice-2.jpg") no-repeat center center fixed;
+}
+#sea{
+    background: url("http://jmarbach.com/images/bubbles.jpg") no-repeat center center fixed;
+}
+#help{
+    background: url("https://www.arborday.org/celebrate/images/tree-planting.jpg") no-repeat center center fixed;
+        -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size: cover;
+    padding: 20px 5px 15px 20px;
+}
+#causes{
+    background: url("http://i.dailymail.co.uk/i/pix/2016/12/29/01/3BB0243F00000578-4072114-China_has_vowed_to_shut_down_privately_owned_steel_coal_and_othe-a-8_1482974169616.jpg") no-repeat center center fixed;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size: cover;
+    padding: 20px 5px 15px 20px;
+    color:black;
+}
+/*.......................Sidebar.........................*/
 div.tab {
     display:block;
     position: absolute;
@@ -34,9 +90,9 @@ div.tab {
     border: 1px solid #ccc;
     border-left:none;
     background-color: #f1f1f1;
-    width: 10%;
+    width: 11%;
     height: 100%;
-    margin-top: 0;
+    margin-top: 3px;
     margin-bottom: 0;
     transition: 0.6s;
     border-radius: 0px 40px 40px 0px;
@@ -75,6 +131,7 @@ div.tab button.active {
     position: absolute;
     padding: 0px 12px;
     border: 1px solid #ccc;
+    margin-top:3px;
     border-left: none;
     border-right: none;
     z-index: 0;
@@ -99,7 +156,7 @@ div.tab button.active {
 #wordBg{
     background-color: rgba(204,204,204,0.75 );
     background-size: cover;
-    font-size: 100%;
+    font-size: 15.5px;
     color: black;
 }
 #wordBg.active{
@@ -139,16 +196,63 @@ div.tab button.active {
 #ttabBg.active{
     background: #ccc;
 }
-#tttagBg{
-    background-image: url("http://dujs.dartmouth.edu/wp-content/uploads/13_74_25_web.jpg");
+#tttabBg{
+    background-image: url("http://onlineapps.tsiic.telangana.gov.in:8888/TsiicWeb/images/powerplant.jpg");
     background-size:cover;
     color:white;
 }
 #tttabBg:hover{
-    background-image: url("http://dingo.care2.com/pictures/causes/3203/3202416.large.jpg");
+    background-image: url("http://az616578.vo.msecnd.net/files/2016/04/28/635974807048610294-1798008217_factory-532_1446890a.jpg");
 }
 #tttabBg.active{
     background: #ccc;
+}
+#defaultOpen{
+    background-image: url("http://assets.worldwildlife.org/photos/13148/images/hero_full/17_292_Earth_Hour_Web_Images_1600x600_v4.jpg?1487079364");
+    background-size:cover;
+    color:white;
+}
+#defaultOpen:hover{
+    background-image: url("http://i.huffpost.com/gen/5065844/images/o-SATELLITE-SPACE-facebook.jpg");
+}
+#defaultOpen.active{
+    background: #ccc;
+}
+#feed{
+    background-image: url("http://cf.ltkcdn.net/garden/images/slide/112065-850x565-Gray-Clay-Soil.jpg"); 
+    background-size:cover;
+    color:white;
+}
+#feed:hover{
+    background-image: url("https://cdn1.pri.org/sites/default/files/styles/story_main/public/Sunflowers.jpg?itok=N-NIcRjQ")
+}
+#feed.active{
+    background: #ccc;
+}
+#bout{
+    background-image: url("https://keddr.com/wp-content/uploads/2014/12/zeitgeist-2014-7.jpg");
+    background-size:cover;
+    color:white;
+}
+#bout:hover{
+    background-image: url("https://lh6.googleusercontent.com/-f8L9SUZaUnY/UT1iG23ZrAI/AAAAAAAAAUE/xen5UxPO-CI/s640/blogger-image-1153110592.jpg");
+}
+#bout.active{
+        background: #ccc;
+}
+#cred{
+    background-image: url("https://www.thesun.co.uk/wp-content/uploads/2016/11/nintchdbpict000203940397.jpg?strip=all&w=960");
+        background-size:cover;
+    color:white;
+}
+#cred:hover{
+    background-image: url("https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/files/75607/area14mp/image-20150323-14609-1x0mv4q.jpg")
+}
+#cred.active{
+    background: #ccc;
+}
+/*.tablinks{
+    border: 1px solid #ccc;
 }
 /*............................Home Content............................*/
 #Home{
@@ -165,8 +269,8 @@ div.tab button.active {
 /*-------Timeline Decor----*/
 
 div.timeline button{
-    border-radius: 100%;
-    width:45px;
+    border-radius: 90%;
+    width:55px;
     height:45px;
     margin:8px;
     font-weight: bold;
@@ -185,27 +289,54 @@ div.timeline button.active{
 .timec{
     text-align:center;
     position: absolute;
-    color: black;
-    background: none;
-    width: 50%;
-    margin-left: 10%;
+    color: white;
+    background: black;
+    padding: 0px 12px;
+
+    height: 90%;
+    width: 97%;
+    border-radius: 10px;
+}
+#svnteen.timec{
+    background: white
 }
 /*---------------------------------------------Graphs----------------------------------------------*/
 #TEMP{
-        display : inline;
+    float:left;
     position:relative;
     left:50px;
-    
+    overflow: hidden;
+}
+#co2Data{
+    float:left;
 }
 #landIce{
     text-align: center;
 }
+.key{
+    background: #444444 no-repeat center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    border-radius: 25px; 
+     height: 100px;
+    width: 210px;
+    border-style: double;
+    margin-top: 10px;
+
+}
 /*...............................................GLOBE...........................................*/
 #rotatingGlobe{
-       display : inline;
+    display: inline;
     position:relative;
+    overflow: hidden;
+    text-align:center; 
     left:50px;
 }
+
+
+
 /* ...................About Page with Form .......................*/
 #About{
 height:100%;
@@ -216,6 +347,7 @@ height:100%;
   text-align: center;
   border-radius: 15px;
 }*/
+
 input[type=text], select, textarea {
     width: 100%; /* Full width */
     padding: 12px; /* Some padding */
@@ -229,7 +361,7 @@ input[type=text], select, textarea {
 
 /* Style the submit button with a specific background color etc */
 input[type=submit] {
-    background-color: #604975;
+    background-color: #447C40;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -239,7 +371,7 @@ input[type=submit] {
 
 /* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
-    background-color: #663366;
+    background-color: #266921;
 }
 
 /* Add a background color and some padding around the form */
@@ -259,9 +391,9 @@ label{
     width: 250px;
 }
 .speak img {
-    display: block;
-    margin: 0 auto;
-    border: 2px solid whitesmoke;
+        border: 2px solid whitesmoke;
+    border-radius: 10px;
     height: 250px;
-    text-align: center;
+        vertical-align: middle;
+
 }
